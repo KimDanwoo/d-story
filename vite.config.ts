@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
     lib: {
-      entry: "src/my-element.ts",
-      formats: ["es"],
+      entry: 'src/my-element.ts',
+      formats: ['es'],
     },
     rollupOptions: {
       // If we want to publish standalone components we don't externalize lit,
@@ -12,4 +12,4 @@ export default defineConfig({
       // external: /^lit/, <-- comment this line
     },
   },
-});
+})

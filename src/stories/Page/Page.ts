@@ -1,16 +1,16 @@
-import { html } from "lit";
-import { Header } from "../Header/Header";
-import "./page.css";
+import { html } from 'lit'
+import { Header } from '../Header/Header'
+import './page.css'
 
 type User = {
-  name: string;
-};
+  name: string
+}
 
 export interface PageProps {
-  user?: User;
-  onLogin: () => void;
-  onLogout: () => void;
-  onCreateAccount: () => void;
+  user?: User
+  onLogin: () => void
+  onLogout: () => void
+  onCreateAccount: () => void
 }
 
 export const Page = ({
@@ -93,4 +93,4 @@ export const Page = ({
       </div>
     </section>
   </article>
-`;
+`

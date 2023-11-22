@@ -1,17 +1,17 @@
-import { html } from "lit";
+import { html } from 'lit'
 
-import { Button } from "../Button/Button";
-import "./header.css";
+import { Button } from '../Button/Button'
+import './header.css'
 
 type User = {
-  name: string;
-};
+  name: string
+}
 
 export interface HeaderProps {
-  user?: User;
-  onLogin: () => void;
-  onLogout: () => void;
-  onCreateAccount: () => void;
+  user?: User
+  onLogin: () => void
+  onLogout: () => void
+  onCreateAccount: () => void
 }
 
 export const Header = ({
@@ -48,19 +48,19 @@ export const Header = ({
       </div>
       <div>
         ${user
-          ? Button({ size: "small", onClick: onLogout, label: "Log out" })
+          ? Button({ size: 'small', onClick: onLogout, label: 'Log out' })
           : html`${Button({
-              size: "small",
+              size: 'small',
               onClick: onLogin,
-              label: "Log in",
+              label: 'Log in',
             })}
             ${Button({
               primary: true,
-              size: "small",
+              size: 'small',
               onClick: onCreateAccount,
-              label: "Sign up",
+              label: 'Sign up',
             })}`}
       </div>
     </div>
   </header>
-`;
+`
