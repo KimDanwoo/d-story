@@ -1,0 +1,26 @@
+.storybook-input {
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  border: 1px solid #ccc;
+  color: black;
+}
+.storybook-input--secondary {
+  color: #333;
+  background-color: transparent;
+}
+.storybook-input--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-input--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-input--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
