@@ -1,5 +1,4 @@
 import { html } from 'lit'
-
 import { Button } from '../Button/Button'
 import './header.css'
 
@@ -44,7 +43,7 @@ export const Header = ({
             />
           </g>
         </svg>
-        <h1>Acme</h1>
+        <h1>Lit</h1>
       </div>
       <div>
         ${user

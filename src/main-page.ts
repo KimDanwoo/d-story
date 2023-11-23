@@ -1,9 +1,10 @@
+import { Header } from './stories/Header/Header'
 import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import './stories/Button/Button.stories'
+
 @customElement('main-page')
 export class MainPage extends LitElement {
-  @property()
+  @property({ type: Boolean })
   checked: boolean = false
   name: string = 'World'
 
@@ -15,6 +16,12 @@ export class MainPage extends LitElement {
   render() {
     return html`
       <main class="main-wrap">
+        ${Header({
+          user: { name: 'danwoo' },
+          onLogin: () => {},
+          onLogout: () => {},
+          onCreateAccount: () => {},
+        })}
         <slot></slot>
       </main>
     `

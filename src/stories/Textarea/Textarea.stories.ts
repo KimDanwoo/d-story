@@ -1,50 +1,53 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from './Button'
-import { Button } from './Button'
+import type { TextareaProps } from './Textarea'
+import { Textarea } from './Textarea'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 const meta = {
-  title: 'Example/Button',
+  title: 'Example/Textarea',
   tags: ['autodocs'],
-  render: (args) => Button(args),
+  render: (args) => Textarea(args),
   argTypes: {
-    backgroundColor: { control: 'color' },
-    onClick: { action: 'onClick' },
+    onChange: { action: 'onChange' },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
     },
   },
   component: 'my-button',
-} satisfies Meta<ButtonProps>
+} satisfies Meta<TextareaProps>
 
 export default meta
-type Story = StoryObj<ButtonProps>
+type Story = StoryObj<TextareaProps>
 
 // More on writing stories with args: https://storybook.js.org/docs/web-components/writing-stories/args
 export const Primary: Story = {
   args: {
     primary: true,
-    label: 'Button',
+    placeholder: '텍스트를 입력하세요',
+    value: '입력한 텍스트',
   },
 }
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    placeholder: '텍스트를 입력하세요',
+    value: '입력한 텍스트',
   },
 }
 
 export const Large: Story = {
   args: {
     size: 'large',
-    label: 'Button',
+    placeholder: '텍스트를 입력하세요',
+    value: '입력한 텍스트',
   },
 }
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
+    placeholder: '텍스트를 입력하세요',
+    value: '입력한 텍스트',
   },
 }

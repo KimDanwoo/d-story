@@ -27,6 +27,7 @@ export const Large: Story = {
     type: 'text',
     placeholder: 'Placeholder',
     size: 'large',
+    value: 'input..',
   },
 }
 
@@ -35,6 +36,7 @@ export const medium: Story = {
     type: 'text',
     placeholder: 'Placeholder',
     size: 'medium',
+    value: 'input..',
   },
 }
 
@@ -43,5 +45,6 @@ export const Small: Story = {
     type: 'text',
     placeholder: 'Placeholder',
     size: 'small',
+    value: 'input..',
   },
 }
