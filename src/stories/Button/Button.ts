@@ -12,7 +12,7 @@ export interface ButtonProps {
   onClick?: () => void
 }
 
-@customElement('basic-button')
+@customElement('base-button')
 export class Button extends LitElement {
   @property({ type: String }) color?: string
   @property() backgroundColor?: string
@@ -95,6 +95,6 @@ export class Button extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'basic-button': Button
+    'base-button': Button
   }
 }

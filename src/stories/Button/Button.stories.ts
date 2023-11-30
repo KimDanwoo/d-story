@@ -4,7 +4,7 @@ import './Button'
 import { html } from 'lit'
 
 const Template = (args: ButtonProps) => html`
-  <basic-button
+  <base-button
     style="margin: 0 0.5rem"
     color=${args.color || 'primary'}
     backgroundColor=${args.backgroundColor || ''}
@@ -13,11 +13,11 @@ const Template = (args: ButtonProps) => html`
     type=${args.type || 'basic'}
     disabled{args.disabled}
     @click=${args.onClick}
-  ></basic-button>
+  ></base-button>
 `
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Components/Button',
   tags: ['autodocs'],
   render: Template,
   argTypes: {
@@ -38,44 +38,91 @@ const meta = {
 export default meta
 type Story = StoryObj<ButtonProps>
 
-export const Primary = () => html`
-  <div style="display:flex">
-    ${Template.bind({})({ label: 'Click Me!', type: 'basic' })}
-    ${Template.bind({})({ label: 'Click Me!', type: 'solid' })}
-    ${Template.bind({})({ label: 'Click Me!', type: 'round' })}
-  </div>
-`
-// {
-//   args: {
-//     color: 'primary',
-//     label: 'Click Me!',
-//   },
-// }
-
-export const Secondary: Story = {
-  args: {
-    color: 'secondary',
-    label: 'Click Me!',
-  },
-}
-
-export const Gray: Story = {
-  args: {
-    color: 'gray',
-    label: 'Click Me!',
-  },
-}
-
-export const Large: Story = {
+export const Default: Story = {
   args: {
     size: 'large',
     label: 'Click Me!',
+    color: 'primary',
   },
 }
 
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Click Me!',
-  },
+export const Primary = {
+  render: () => html` <div style="display:flex">
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="primary"
+    ></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="primary"
+      type="basic"
+    ></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="primary"
+      type="round"
+    ></base-button>
+  </div>`,
+}
+
+export const Secondary = {
+  render: () => html` <div style="display:flex">
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="secondary"
+    ></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="secondary"
+      type="basic"
+    ></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="secondary"
+      type="round"
+    ></base-button>
+  </div>`,
+}
+
+export const Gray = {
+  render: () => html` <div style="display:flex">
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="gray"
+    ></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="gray"
+      type="basic"
+    ></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="large"
+      label="Click Me!"
+      color="gray"
+      type="round"
+    ></base-button>
+  </div>`,
 }
