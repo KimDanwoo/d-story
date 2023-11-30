@@ -12,7 +12,19 @@
   </head>
   <body>
     <main>
-      <basic-button label="click me!" size="large" color="secondary" />
+      <section>
+        <base-button
+          label="click me!"
+          size="large"
+          color="secondary"
+          onClick="handleClickButton()"
+        />
+      </section>
     </main>
+    <script>
+      function handleClickButton() {
+        alert('clicked!')
+      }
+    </script>
   </body>
 </html>

@@ -1,16 +1,26 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
 import type { InputProps } from './Input'
-import { Input } from './Input'
+import './Input'
+import { html } from 'lit'
+
+const Template = (args: InputProps) => html`
+  <base-input
+    type="${args.type || 'text'}"
+    size=${args.size || 'small'}
+    placeholder=${args.placeholder || '내용을 입력하세요'}
+    value=${args.value || ''}
+    helperText=${args.helperText || ''}
+    ?disabled=${args.disabled || false}
+    ?isError=${args.isError || false}
+    @change=${args.onChange}
+  ></base-input>
+`
 
 const meta = {
-  title: 'Example/Input',
+  title: 'Components/Input',
   tags: ['autodocs'],
-  render: (args) => Input(args),
+  render: Template,
   argTypes: {
-    type: {
-      control: { type: 'select' },
-      options: ['text', 'password', 'email', 'number', 'search', 'tel', 'url'],
-    },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -22,29 +32,37 @@ const meta = {
 export default meta
 type Story = StoryObj<InputProps>
 
-export const Large: Story = {
+export const Default: Story = {
   args: {
     type: 'text',
-    placeholder: 'Placeholder',
+    placeholder: '',
     size: 'large',
-    value: 'input..',
+    value: '',
+    disabled: false,
+    isError: false,
+    helperText: '',
   },
 }
 
-export const medium: Story = {
+export const Disabled: Story = {
   args: {
     type: 'text',
-    placeholder: 'Placeholder',
-    size: 'medium',
-    value: 'input..',
+    placeholder: '',
+    size: 'large',
+    value: '',
+    disabled: true,
+    isError: false,
   },
 }
 
-export const Small: Story = {
+export const Error: Story = {
   args: {
     type: 'text',
-    placeholder: 'Placeholder',
-    size: 'small',
-    value: 'input..',
+    placeholder: '',
+    size: 'large',
+    value: '',
+    disabled: true,
+    isError: true,
+    helperText: '에러가 발생했습니다.',
   },
 }

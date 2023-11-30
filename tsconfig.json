@@ -26,6 +26,6 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/index.ts"],
   "exclude": ["src/**/*.stories.ts"] // <-- this is the line we need to add
 }
