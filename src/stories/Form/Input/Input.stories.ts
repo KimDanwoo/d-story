@@ -17,7 +17,7 @@ const Template = (args: InputProps) => html`
 `
 
 const meta = {
-  title: 'Components/Input',
+  title: 'Components/Form/Input',
   tags: ['autodocs'],
   render: Template,
   argTypes: {

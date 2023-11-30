@@ -49,7 +49,7 @@ export class Input extends LitElement {
           ?disabled=${this.disabled}
           @input=${this.onChange}
         />
-        ${this.isError
+        ${this.isError && this.helperText
           ? html`<p class="helper-text">${this.helperText}</p>`
           : ''}
       </div>
