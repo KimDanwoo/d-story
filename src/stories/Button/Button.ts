@@ -14,8 +14,8 @@ export interface ButtonProps {
 
 @customElement('base-button')
 export class Button extends LitElement {
-  @property({ type: String }) color?: string
-  @property() backgroundColor?: string
+  @property({ type: String }) color?: 'primary' | 'secondary' | 'gray'
+  @property({ type: String }) backgroundColor?: string
   @property({ type: String }) size?: 'small' | 'medium' | 'large'
   @property({ type: String }) type?: 'basic' | 'solid' | 'round'
   @property({ type: String }) label: string = ''
