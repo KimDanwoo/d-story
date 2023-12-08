@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/web-components'
-import { AvatarProps } from './Avatar'
-import './Avatar'
+import { AvatarProps } from '../components/Avatar/Avatar'
+import '../components/Avatar/Avatar'
 import { html } from 'lit'
 
 const meta = {
