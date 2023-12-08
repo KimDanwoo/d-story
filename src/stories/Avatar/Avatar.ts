@@ -1,6 +1,6 @@
-import { LitElement, css, html } from 'lit'
+import { LitElement, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-
+import styles from './avatar.css?inline'
 export interface AvatarProps {
   link: string
 }
@@ -37,51 +37,7 @@ export class Avatar extends LitElement {
     `
   }
 
-  static styles = css`
-    .storybook-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #ebf0f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .storybook-avatar.md {
-      width: 48px;
-      height: 48px;
-    }
-    .storybook-avatar.lg {
-      width: 64px;
-      height: 64px;
-    }
-    .storybook-avatar.xlg {
-      width: 80px;
-      height: 80px;
-    }
-    .storybook-avatar img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-    }
-
-    .storybook-avatar.sm .svg-icon {
-      width: 20px;
-      height: 20px;
-    }
-
-    .storybook-avatar.md .svg-icon,
-    .storybook-avatar.lg .svg-icon {
-      width: 24px;
-      height: 24px;
-    }
-    .storybook-avatar.xlg .svg-icon {
-      width: 32px;
-      height: 32px;
-    }
-  `
+  static styles = unsafeCSS(styles)
 }
 
 declare global {

@@ -1,6 +1,7 @@
-import { LitElement, html, css } from 'lit'
+import { LitElement, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { styleMap } from 'lit/directives/style-map.js'
+import styles from './button.css?inline'
 
 export interface ButtonProps {
   color: 'primary' | 'secondary' | 'gray'
@@ -38,59 +39,7 @@ export class Button extends LitElement {
     `
   }
 
-  static styles = css`
-    .button {
-      font-family: Spoqa Han Sans Neo;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: -0.48px;
-      border: 0;
-      cursor: pointer;
-    }
-
-    .button:disabled {
-      background-color: black;
-    }
-
-    .button-basic {
-      border-radius: 0.25rem;
-    }
-
-    .button-solid {
-      border-radius: 0rem;
-    }
-
-    .button-round {
-      border-radius: 45px;
-    }
-
-    .button--primary {
-      color: #fff;
-      background: #1db177;
-    }
-    .button--secondary {
-      color: white;
-      background-color: #535c68;
-      box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-    }
-    .button--gray {
-      color: #666666;
-      background-color: #f5f5f5;
-    }
-    .button--small {
-      font-size: 12px;
-      padding: 10px 16px;
-    }
-    .button--medium {
-      font-size: 14px;
-      padding: 11px 20px;
-    }
-    .button--large {
-      font-size: 16px;
-      padding: 12px 24px;
-    }
-  `
+  static styles = unsafeCSS(styles)
 }
 
 declare global {
