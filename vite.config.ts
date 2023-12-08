@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/main-page.ts',
+      entry: 'src/index.ts',
       formats: ['es'],
     },
     rollupOptions: {},
