@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from './Button'
-import './Button'
+import type { ButtonProps } from '../components/Button/Button'
+import '../components/Button/Button'
 import { html } from 'lit'
 
 const Template = (args: ButtonProps) => html`

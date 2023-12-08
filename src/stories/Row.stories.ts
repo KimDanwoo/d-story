@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/web-components'
 import { html } from 'lit'
-import './Row'
+import '../components/Row/Row'
 const meta = {
   title: 'Components/Row',
   tags: ['autodocs'],
