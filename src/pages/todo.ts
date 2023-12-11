@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit'
 import { customElement, state, query, property } from 'lit/decorators.js'
+import { map } from 'lit/directives/map.js'
 
 type ToDoItem = {
   text: string
@@ -48,7 +49,8 @@ export class ToDoList extends LitElement {
       ? this._listItems.filter((item) => !item.completed)
       : this._listItems
 
-    const todoList = filterTodoList.map(
+    const todoList = map(
+      filterTodoList,
       (item) =>
         html` <li
           class="TODO ${item.completed ? 'completed' : ''}"
@@ -99,6 +101,7 @@ export class ToDoList extends LitElement {
   input!: HTMLInputElement
 
   addToDo() {
+    if (!this.input.value) return
     this._listItems = [
       ...this._listItems,
       { text: this.input.value, completed: false },
