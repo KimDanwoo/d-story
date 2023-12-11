@@ -1,3 +1,28 @@
-.row {
+.storybook-row {
   display: flex;
+  flex-direction: row;
+}
+
+.storybook-row.between {
+  justify-content: space-between;
+}
+
+.storybook-row.center {
+  justify-content: center;
+}
+
+.storybook-row.end {
+  justify-content: flex-end;
+}
+
+.storybook-row.start {
+  justify-content: flex-start;
+}
+
+.storybook-row.around {
+  justify-content: space-around;
+}
+
+.storybook-row.evenly {
+  justify-content: space-evenly;
 }

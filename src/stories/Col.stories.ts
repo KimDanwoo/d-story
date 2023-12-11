@@ -1,31 +1,31 @@
 import { html } from 'lit'
 import { Meta, StoryObj } from '@storybook/web-components'
-import '../components/Row/Row'
-import { RowProps } from '../components/Row/Row'
+import '../components/Col/index'
+import { ColProps } from '../components/Col/index'
 
 const meta = {
-  title: 'Components/Row',
+  title: 'Components/Col',
   tags: ['autodocs'],
-  render: (args: RowProps) =>
-    html`<base-row content=${args.content || 'start'}>
+  render: (args: ColProps) =>
+    html`<base-row content=${args.items || 'start'}>
       <p>1번 항목</p>
       <p>2번 항목</p>
       <p>3번 항목</p>
     </base-row>`,
   argTypes: {
-    content: {
+    items: {
       control: { type: 'select' },
-      options: ['center', 'start', 'end', 'between', 'around', 'evenly'],
+      options: ['center', 'start', 'end'],
     },
   },
-} satisfies Meta<RowProps>
+} satisfies Meta<ColProps>
 
 export default meta
-type Story = StoryObj<RowProps>
+type Story = StoryObj<ColProps>
 
 export const Default: Story = {
   args: {
-    content: 'between',
+    items: 'center',
   },
 }
 export const Primary: Story = {
