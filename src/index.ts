@@ -9,3 +9,8 @@ export * from './components/Avatar/Avatar.ts'
 export * from './components/Chip/Chip.ts'
 export * from './components/Row/Row.ts'
 export * from './components/Input/Input.ts'
+
+import './pages/todo.ts'
+import './pages/list.ts'
+export * from './pages/todo.ts'
+export * from './pages/list.ts'

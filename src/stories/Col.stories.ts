@@ -7,15 +7,22 @@ const meta = {
   title: 'Components/Col',
   tags: ['autodocs'],
   render: (args: ColProps) =>
-    html`<base-row content=${args.items || 'start'}>
+    html`<base-col
+      items=${args.items || 'start'}
+      content=${args.content || 'between'}
+    >
       <p>1번 항목</p>
       <p>2번 항목</p>
       <p>3번 항목</p>
-    </base-row>`,
+    </base-col>`,
   argTypes: {
     items: {
       control: { type: 'select' },
       options: ['center', 'start', 'end'],
+    },
+    content: {
+      control: { type: 'select' },
+      options: ['center', 'start', 'end', 'between', 'around', 'evenly'],
     },
   },
 } satisfies Meta<ColProps>
@@ -26,6 +33,7 @@ type Story = StoryObj<ColProps>
 export const Default: Story = {
   args: {
     items: 'center',
+    content: 'between',
   },
 }
 export const Primary: Story = {
