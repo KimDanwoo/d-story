@@ -1,6 +1,6 @@
 import { LitElement, html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import styles from './col.css?inline'
+import styles from './index.css?inline'
 
 export interface ColProps {
   items: 'center' | 'start' | 'end'
@@ -10,8 +10,12 @@ export interface ColProps {
 @customElement('base-col')
 export class Col extends LitElement {
   @property({ type: String }) items = 'start'
+  @property({ type: String }) content = 'start'
+
   render() {
-    return html`<div class="storybook-col align-${this.items}">
+    return html`<div
+      class="storybook-col align-${this.items} justify-${this.content}"
+    >
       <slot></slot>
     </div>`
   }
