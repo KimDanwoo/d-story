@@ -6,6 +6,10 @@
   letter-spacing: -0.48px;
   border: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .button:disabled {
@@ -37,15 +41,27 @@
   color: #666666;
   background-color: #f5f5f5;
 }
-.button--small {
+
+.button--sm {
   font-size: 12px;
-  padding: 10px 16px;
+  /* height: 32px; */
+  padding: 6px;
 }
-.button--medium {
+
+.button--md {
   font-size: 14px;
-  padding: 11px 20px;
+  padding: 8px;
+  /* height: 40px; */
 }
-.button--large {
+
+.button--lg {
   font-size: 16px;
-  padding: 12px 24px;
+  padding: 12px;
+  /* height: 48px; */
+}
+
+.button--xl {
+  font-size: 18px;
+  padding: 16px;
+  /* height: 56px; */
 }
