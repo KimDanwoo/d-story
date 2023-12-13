@@ -29,6 +29,10 @@ const meta = {
       control: { type: 'select' },
       options: ['sm', 'md', 'lg', 'xl'],
     },
+    type: {
+      control: { type: 'select' },
+      options: ['basic', 'solid', 'round'],
+    },
     color: {
       control: { type: 'select' },
       options: ['primary', 'secondary', 'gray'],
