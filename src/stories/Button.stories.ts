@@ -2,16 +2,17 @@ import type { Meta, StoryObj } from '@storybook/web-components'
 import type { ButtonProps } from '../components/Button/Button'
 import '../components/Button/Button'
 import { html } from 'lit'
+import '../components/Icons/PlusIcon'
 
 const Template = (args: ButtonProps) => html`
   <base-button
     style="margin: 0 0.5rem"
     color=${args.color || 'primary'}
     backgroundColor=${args.backgroundColor || ''}
-    size=${args.size || 'medium'}
+    size=${args.size || 'md'}
     label=${args.label}
     type=${args.type || 'basic'}
-    disabled{args.disabled}
+    ?disabled=${args.disabled}
     @click=${args.onClick}
   ></base-button>
 `
@@ -23,9 +24,10 @@ const meta = {
   argTypes: {
     backgroundColor: { control: 'color' },
     onClick: { action: 'onClick' },
+    disabled: { control: 'boolean' },
     size: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      options: ['sm', 'md', 'lg', 'xl'],
     },
     color: {
       control: { type: 'select' },
@@ -40,7 +42,7 @@ type Story = StoryObj<ButtonProps>
 
 export const Default: Story = {
   args: {
-    size: 'large',
+    size: 'lg',
     label: 'Click Me!',
     color: 'primary',
   },
@@ -50,14 +52,14 @@ export const Primary = {
   render: () => html` <div style="display:flex">
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="primary"
     ></base-button>
 
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="primary"
       type="basic"
@@ -65,7 +67,7 @@ export const Primary = {
 
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="primary"
       type="round"
@@ -77,14 +79,14 @@ export const Secondary = {
   render: () => html` <div style="display:flex">
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="secondary"
     ></base-button>
 
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="secondary"
       type="basic"
@@ -92,7 +94,7 @@ export const Secondary = {
 
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="secondary"
       type="round"
@@ -104,14 +106,14 @@ export const Gray = {
   render: () => html` <div style="display:flex">
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="gray"
     ></base-button>
 
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="gray"
       type="basic"
@@ -119,10 +121,48 @@ export const Gray = {
 
     <base-button
       style="margin-right:6px"
-      size="large"
+      size="lg"
       label="Click Me!"
       color="gray"
       type="round"
     ></base-button>
+  </div>`,
+}
+
+export const ButtonSize = {
+  render: () => html` <div style="display:flex">
+    <base-button
+      style="margin-right:6px"
+      size="sm"
+      label="Click Me!"
+    ></base-button>
+
+    <base-button style="margin-right:6px" label="Click Me!"></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="lg"
+      label="Click Me!"
+    ></base-button>
+
+    <base-button
+      style="margin-right:6px"
+      size="xl"
+      label="Click Me!"
+    ></base-button>
+  </div>`,
+}
+
+export const IconButton = {
+  render: () => html` <div style="display:flex">
+    <base-button style="margin-right:6px" size="md">
+      <plus-icon slot="leftIcon"></plus-icon>
+    </base-button>
+    <base-button style="margin-right:6px" size="md" label="Click Me!">
+      <plus-icon slot="leftIcon"></plus-icon>
+    </base-button>
+    <base-button style="margin-right:6px" size="md" label="Click Me!">
+      <plus-icon slot="rightIcon"></plus-icon>
+    </base-button>
   </div>`,
 }
