@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js'
 @customElement('plus-icon')
 export class PlusIcon extends LitElement {
   @property({ type: String }) color? = 'white'
-  @property({ type: String }) size? = '20'
+  @property({ type: String }) size? = '24'
   render() {
     const iconWrapperStyle = `width:${this.size}px!important; height:${this.size}px!important;`
     return html`<div style=${iconWrapperStyle}>
