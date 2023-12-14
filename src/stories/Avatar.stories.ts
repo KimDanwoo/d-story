@@ -7,7 +7,13 @@ const meta = {
   title: 'Components/Avatar',
   tags: ['autodocs'],
   render: (args: AvatarProps) =>
-    html`<base-avatar link=${args.link}></base-avatar>`,
+    html`<base-avatar link=${args.link} size=${args.size}></base-avatar>`,
+  argTypes: {
+    size: {
+      control: { type: 'select' },
+      options: ['sm', 'md', 'lg', 'xlg'],
+    },
+  },
 } satisfies Meta<AvatarProps>
 
 export default meta
@@ -16,6 +22,7 @@ type Story = StoryObj<AvatarProps>
 export const Default: Story = {
   args: {
     link: '',
+    size: 'md',
   },
 }
 
