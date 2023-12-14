@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
 import type { ButtonProps } from '../components/Button/Button'
 import '../components/Button/Button'
-import '../components/Button/OutlineButton'
 import { html } from 'lit'
 import '../components/Icons/PlusIcon'
 
@@ -172,47 +171,3 @@ export const IconButton = {
   </div>`,
 }
 
-export const OutlineButtonPrimary = {
-  render: () => html`
-    <div style="display:flex">
-      <outline-button
-        style="margin-right:6px"
-        label="click me!"
-      ></outline-button>
-      <outline-button
-        style="margin-right:6px"
-        label="click me!"
-        type="solid"
-      ></outline-button>
-      <outline-button
-        style="margin-right:6px"
-        label="click me!"
-        type="round"
-      ></outline-button>
-    </div>
-  `,
-}
-
-export const OutlineButtonSecondary = {
-  render: () => html`
-    <div style="display:flex">
-      <outline-button
-        style="margin-right:6px"
-        label="click me!"
-        color="secondary"
-      ></outline-button>
-      <outline-button
-        style="margin-right:6px"
-        label="click me!"
-        color="secondary"
-        type="solid"
-      ></outline-button>
-      <outline-button
-        style="margin-right:6px"
-        label="click me!"
-        color="secondary"
-        type="round"
-      ></outline-button>
-    </div>
-  `,
-}

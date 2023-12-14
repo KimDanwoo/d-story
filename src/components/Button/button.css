@@ -49,6 +49,21 @@
   color: #aaaaaa;
 }
 
+.button--primary:hover {
+  color: #fff;
+  background: #1e9666;
+}
+
+.button--secondary:hover {
+  color: #fff;
+  background: #3b4047;
+}
+
+.button--gray:hover {
+  color: #666666;
+  background-color: #e2e2e2;
+}
+
 .button--sm {
   font-size: 12px;
   padding: 6px;
