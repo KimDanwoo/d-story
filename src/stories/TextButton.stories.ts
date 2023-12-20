@@ -76,17 +76,20 @@ export const Secondary = {
       <text-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="secondary"
       ></text-button>
       <text-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="secondary"
         type="solid"
       ></text-button>
       <text-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="secondary"
         type="round"
       ></text-button>
@@ -100,17 +103,20 @@ export const Gray = {
       <text-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="gray"
       ></text-button>
       <text-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="gray"
         type="solid"
       ></text-button>
       <text-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="gray"
         type="round"
       ></text-button>
@@ -120,13 +126,13 @@ export const Gray = {
 
 export const IconButton = {
   render: () => html` <div style="display:flex">
-    <text-button style="margin-right:6px" size="md">
+    <text-button style="margin-right:6px" size="lg">
       <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
     </text-button>
-    <text-button style="margin-right:6px" size="md" label="Click Me!">
+    <text-button style="margin-right:6px" size="lg" label="Click Me!">
       <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
     </text-button>
-    <text-button style="margin-right:6px" size="md" label="Click Me!">
+    <text-button style="margin-right:6px" size="lg" label="Click Me!">
       <plus-icon slot="rightIcon" color="#1DB177"></plus-icon>
     </text-button>
   </div>`,
