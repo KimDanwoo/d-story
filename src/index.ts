@@ -14,5 +14,12 @@ export * from './components/Icons/PlusIcon.ts'
 
 import './pages/todo.ts'
 import './pages/list.ts'
+import './pages/date.ts'
+import './pages/word-viewer.ts'
+import './pages/content-box.ts'
+
 export * from './pages/todo.ts'
 export * from './pages/list.ts'
+export * from './pages/date.ts'
+export * from './pages/word-viewer.ts'
+export * from './pages/content-box.ts'
