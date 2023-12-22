@@ -16,11 +16,37 @@ export class SimpleTooltip extends LitElement {
       background: black;
       color: white;
       pointer-events: none;
+      opacity: 0;
+      transform: scale(0.75);
+      transition: opacity, transform;
+      transition-duration: 0.33s;
+    }
+
+    :host([showing]) {
+      opacity: 1;
+      transform: scale(1);
     }
   `
 
+  static lazy(target: Element, callback: (target: SimpleTooltip) => void) {
+    const createTooltip = () => {
+      const tooltip = document.createElement('simple-tooltip') as SimpleTooltip
+      callback(tooltip)
+      target.parentNode!.insertBefore(tooltip, target.nextSibling)
+      tooltip.show()
+      enterEvents.forEach((eventName) =>
+        target.removeEventListener(eventName, createTooltip)
+      )
+    }
+    enterEvents.forEach((eventName) =>
+      target.addEventListener(eventName, createTooltip)
+    )
+  }
+
   @property({ type: Number })
   offset = 4
+  @property({ reflect: true, type: Boolean })
+  showing = false
 
   _target: Element | null = null
 
@@ -44,10 +70,14 @@ export class SimpleTooltip extends LitElement {
     this._target = target
   }
 
+  constructor() {
+    super()
+    this.addEventListener('transitionend', this.finishHide)
+  }
+
   connectedCallback() {
     super.connectedCallback()
     this.hide()
-    // Setup target if needed
     this.target ??= this.previousElementSibling
   }
 
@@ -57,9 +87,19 @@ export class SimpleTooltip extends LitElement {
 
   show = () => {
     this.style.cssText = ''
+    const { x, y, height } = this.target!.getBoundingClientRect()
+    this.style.left = `${x}px`
+    this.style.top = `${y + height + this.offset}px`
+    this.showing = true
   }
 
   hide = () => {
-    this.style.display = 'none'
+    this.showing = false
+  }
+
+  finishHide = () => {
+    if (!this.showing) {
+      this.style.display = 'none'
+    }
   }
 }

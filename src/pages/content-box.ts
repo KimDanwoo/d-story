@@ -1,10 +1,17 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import './tooltip.js'
+import { SimpleTooltip } from './tooltip.js'
 
 @customElement('content-box')
 export class MyContent extends LitElement {
-  /* playground-fold */
+  firstUpdated() {
+    const greeting = this.shadowRoot!.getElementById('greeting')!
+    SimpleTooltip.lazy(greeting, (tooltip: SimpleTooltip) => {
+      tooltip.textContent = `${this.name}, there's coffee available in the lounge.`
+    })
+  }
+
   static styles = css`
     .box {
       height: 80px;
