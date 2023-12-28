@@ -1,9 +1,8 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-// Events to turn on/off the tooltip
-const enterEvents = ['pointerenter', 'focus']
-const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click']
+const enterEvents = ['click']
+const leaveEvents = ['blur', 'keydown']
 
 @customElement('simple-tooltip')
 export class SimpleTooltip extends LitElement {
@@ -27,8 +26,6 @@ export class SimpleTooltip extends LitElement {
       transform: scale(1);
     }
   `
-
-  updateExternalElement() {}
 
   static lazy(target: Element, callback: (target: SimpleTooltip) => void) {
     const createTooltip = () => {
@@ -55,7 +52,6 @@ export class SimpleTooltip extends LitElement {
   get target() {
     return this._target
   }
-
   set target(target: Element | null) {
     if (this.target) {
       enterEvents.forEach((name) =>
@@ -70,6 +66,11 @@ export class SimpleTooltip extends LitElement {
       enterEvents.forEach((name) => target!.addEventListener(name, this.show))
       leaveEvents.forEach((name) => target!.addEventListener(name, this.hide))
     }
+    if (!this.target && !target) {
+      window.addEventListener('click', this.hide)
+    }
+    console.log(target)
+    console.log(this.target)
     this._target = target
   }
 
@@ -104,14 +105,5 @@ export class SimpleTooltip extends LitElement {
     if (!this.showing) {
       this.style.display = 'none'
     }
-  }
-
-  addGlobalClickListener() {
-    document.addEventListener('click', (event: Element) => {
-      // 클릭된 요소가 이 엘리먼트 내부에 있는지 확인
-      if (!this.contains(event.target)) {
-        this.hide()
-      }
-    })
   }
 }
