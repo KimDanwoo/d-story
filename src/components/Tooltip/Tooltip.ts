@@ -1,8 +1,8 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-const enterEvents = ['click']
-const leaveEvents = ['blur', 'keydown']
+const enterEvents = ['pointerenter', 'click']
+const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click']
 
 @customElement('simple-tooltip')
 export class SimpleTooltip extends LitElement {
@@ -66,11 +66,6 @@ export class SimpleTooltip extends LitElement {
       enterEvents.forEach((name) => target!.addEventListener(name, this.show))
       leaveEvents.forEach((name) => target!.addEventListener(name, this.hide))
     }
-    if (!this.target && !target) {
-      window.addEventListener('click', this.hide)
-    }
-    console.log(target)
-    console.log(this.target)
     this._target = target
   }
 
