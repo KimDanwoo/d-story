@@ -60,6 +60,11 @@ export const HasImage = {
         size="xlg"
         style="margin-right:12px;"
       ></base-avatar>
+      <base-avatar
+        link="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHGbemCSY3JhKeqkaa8T04WaI8QFpSII7KAw&usqp=CAU"
+        size="xlg"
+        style="margin-right:12px;"
+      ></base-avatar>
     </div>
   `,
 }
