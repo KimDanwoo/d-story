@@ -58,15 +58,18 @@ export const OutlineButtonPrimary = {
       <outline-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
       ></outline-button>
       <outline-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         type="solid"
       ></outline-button>
       <outline-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         type="round"
       ></outline-button>
     </div>
@@ -79,17 +82,20 @@ export const OutlineButtonSecondary = {
       <outline-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="secondary"
       ></outline-button>
       <outline-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="secondary"
         type="solid"
       ></outline-button>
       <outline-button
         style="margin-right:6px"
         label="click me!"
+        size="lg"
         color="secondary"
         type="round"
       ></outline-button>
@@ -99,13 +105,13 @@ export const OutlineButtonSecondary = {
 
 export const IconButton = {
   render: () => html` <div style="display:flex">
-    <outline-button style="margin-right:6px" size="md">
+    <outline-button style="margin-right:6px" size="lg">
       <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
     </outline-button>
-    <outline-button style="margin-right:6px" size="md" label="Click Me!">
+    <outline-button style="margin-right:6px" size="lg" label="Click Me!">
       <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
     </outline-button>
-    <outline-button style="margin-right:6px" size="md" label="Click Me!">
+    <outline-button style="margin-right:6px" size="lg" label="Click Me!">
       <plus-icon slot="rightIcon" color="#1DB177"></plus-icon>
     </outline-button>
   </div>`,

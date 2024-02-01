@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js'
 import styles from './avatar.css?inline'
 export interface AvatarProps {
   link: string
+  size: 'sm' | 'md' | 'lg' | 'xlg'
 }
 
 @customElement('base-avatar')
