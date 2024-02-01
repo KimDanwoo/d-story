@@ -1,7 +1,8 @@
-import { LitElement, html, unsafeCSS } from 'lit'
+import { html, unsafeCSS } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { styleMap } from 'lit/directives/style-map.js'
 import styles from './button.css?inline'
+import TailwindElement from '../../shared/tailwind.element'
 
 export interface ButtonProps {
   color: 'primary' | 'secondary' | 'gray'
@@ -16,7 +17,7 @@ export interface ButtonProps {
 }
 
 @customElement('base-button')
-export class Button extends LitElement {
+export class Button extends TailwindElement(styles) {
   @property({ type: String }) color?: 'primary' | 'secondary' | 'gray' =
     'primary'
   @property({ type: String }) backgroundColor?: string
@@ -39,8 +40,6 @@ export class Button extends LitElement {
       </button>
     `
   }
-
-  static styles = unsafeCSS(styles)
 }
 
 declare global {

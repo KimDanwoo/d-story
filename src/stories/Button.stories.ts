@@ -1,3 +1,4 @@
+import { Button } from './../components/Button/Button'
 import type { Meta, StoryObj } from '@storybook/web-components'
 import type { ButtonProps } from '../components/Button/Button'
 import '../components/Button/Button'
@@ -170,4 +171,3 @@ export const IconButton = {
     </base-button>
   </div>`,
 }
-
