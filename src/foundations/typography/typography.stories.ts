@@ -21,13 +21,11 @@ const Template = () => html`
     ${tableStyles}
   </style>
   <div>
-    <!-- <h4 class="tbd-40">Typography</h4> -->
     <p class="trg-14 my-5 text-[#777777]">
-      피터팬 좋은 방 구하기 타이포그래피는 Spoqa han sans neo만을 사용하여
-      일관된 디자인을 만들 수 있도록 하는 타이포그래피 시스템을 제공합니다.<br />
-      여러 상황에 적용하기 위해 새로운 스타일의 규칙을 만들었습니다.
-      Typography의 T, weight의 약자(rg, md, bd), 폰트 크기를 합쳐 스타일을
-      구성했습니다.<br />
+      타이포그래피는 Spoqa han sans neo만을 사용하여 일관된 디자인을 만들 수 있도록 하는 타이포그래피 시스템을
+      제공합니다.<br />
+      여러 상황에 적용하기 위해 새로운 스타일의 규칙을 만들었습니다. Typography의 T, weight의 약자(rg, md, bd), 폰트
+      크기를 합쳐 스타일을 구성했습니다.<br />
       링크에 적용되는 타이포는 어떠한 크기든 피그마내의 기능으로 처리합니다.
     </p>
     <table>

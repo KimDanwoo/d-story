@@ -4,13 +4,9 @@ import '../../components/icon/icon'
 
 const Template = () => html`
   <div>
-    <p class="trg-14 my-5 text-[#777777]">
-      피터팬 플랫폼에서 사용되는 아이콘을 정의합니다.
-    </p>
+    <p class="trg-14 my-5 text-[#777777]">아이콘을 정의합니다.</p>
     <h2 class="tbd-16">01_Users</h2>
-    <div
-      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
-    >
+    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
       <div class="flex flex-col w-[60px] justify-center items-center">
         <icon name="User"></icon>
         <div class="trg-12">User</div>
@@ -29,9 +25,7 @@ const Template = () => html`
       </div>
     </div>
     <h2 class="tbd-16">02_Arrows</h2>
-    <div
-      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
-    >
+    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
       <div class="flex flex-col w-[60px] justify-center items-center">
         <icon name="ArrowExchangeHorizontal"></icon>
         <div class="trg-12">ArrowExchangeHorizontal</div>
@@ -123,9 +117,7 @@ const Template = () => html`
     </div>
 
     <h2 class="tbd-16">03_Interfaces</h2>
-    <div
-      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
-    >
+    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
       <div class="flex flex-col w-[60px] justify-center items-center">
         <icon name="Backspace"></icon>
         <div class="trg-12">Backspace</div>
@@ -437,9 +429,7 @@ const Template = () => html`
     </div>
 
     <h2 class="tbd-16">04_Location</h2>
-    <div
-      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
-    >
+    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
       <div class="flex flex-col w-[60px] justify-center items-center ">
         <icon name="Gps"></icon>
         <div class="trg-12">Gps</div>
@@ -503,9 +493,7 @@ const Template = () => html`
     </div>
 
     <h2 class="tbd-16">05_Room Option</h2>
-    <div
-      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
-    >
+    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
       <div class="flex flex-col w-[60px] justify-center items-center ">
         <icon name="Road"></icon>
         <div class="trg-12">Road</div>
@@ -629,9 +617,7 @@ const Template = () => html`
     </div>
 
     <h2 class="tbd-16">06_Room Type</h2>
-    <div
-      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
-    >
+    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
       <div class="flex flex-col w-[60px] justify-center items-center ">
         <icon name="Villa"></icon>
         <div class="trg-12">Villa</div>
@@ -651,9 +637,7 @@ const Template = () => html`
     </div>
 
     <h2 class="tbd-16">07_Social</h2>
-    <div
-      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
-    >
+    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
       <div class="flex flex-col w-[60px] justify-center items-center ">
         <icon name="Cafe"></icon>
         <div class="trg-12">Cafe</div>
