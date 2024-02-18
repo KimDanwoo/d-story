@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from '../components/Button/Button'
-import '../components/OutlineButton/OutlineButton'
+import type { ButtonProps } from '../Button/Button'
+import './TextButton'
 import { html } from 'lit'
-import '../components/Icons/PlusIcon'
+// import '../Icons/PlusIcon'
 
 const Template = (args: ButtonProps) => html`
-  <outline-button
+  <text-button
     style="margin: 0 0.5rem"
     color=${args.color || 'primary'}
     backgroundColor=${args.backgroundColor || ''}
@@ -14,11 +14,11 @@ const Template = (args: ButtonProps) => html`
     type=${args.type || 'basic'}
     ?disabled=${args.disabled}
     @click=${args.onClick}
-  ></outline-button>
+  ></text-button>
 `
 
 const meta = {
-  title: 'Components/OutlineButton',
+  title: 'Components/TextButton',
   tags: ['autodocs'],
   render: Template,
   argTypes: {
@@ -38,7 +38,7 @@ const meta = {
       options: ['primary', 'secondary'],
     },
   },
-  component: 'my-button',
+  component: 'text-button',
 } satisfies Meta<ButtonProps>
 
 export default meta
@@ -52,67 +52,88 @@ export const Default: Story = {
   },
 }
 
-export const OutlineButtonPrimary = {
+export const Primary = {
   render: () => html`
     <div style="display:flex">
-      <outline-button
+      <text-button style="margin-right:6px" label="click me!"></text-button>
+      <text-button
         style="margin-right:6px"
         label="click me!"
-        size="lg"
-      ></outline-button>
-      <outline-button
-        style="margin-right:6px"
-        label="click me!"
-        size="lg"
         type="solid"
-      ></outline-button>
-      <outline-button
+      ></text-button>
+      <text-button
         style="margin-right:6px"
         label="click me!"
-        size="lg"
         type="round"
-      ></outline-button>
+      ></text-button>
     </div>
   `,
 }
 
-export const OutlineButtonSecondary = {
+export const Secondary = {
   render: () => html`
     <div style="display:flex">
-      <outline-button
+      <text-button
         style="margin-right:6px"
         label="click me!"
         size="lg"
         color="secondary"
-      ></outline-button>
-      <outline-button
+      ></text-button>
+      <text-button
         style="margin-right:6px"
         label="click me!"
         size="lg"
         color="secondary"
         type="solid"
-      ></outline-button>
-      <outline-button
+      ></text-button>
+      <text-button
         style="margin-right:6px"
         label="click me!"
         size="lg"
         color="secondary"
         type="round"
-      ></outline-button>
+      ></text-button>
+    </div>
+  `,
+}
+
+export const Gray = {
+  render: () => html`
+    <div style="display:flex">
+      <text-button
+        style="margin-right:6px"
+        label="click me!"
+        size="lg"
+        color="gray"
+      ></text-button>
+      <text-button
+        style="margin-right:6px"
+        label="click me!"
+        size="lg"
+        color="gray"
+        type="solid"
+      ></text-button>
+      <text-button
+        style="margin-right:6px"
+        label="click me!"
+        size="lg"
+        color="gray"
+        type="round"
+      ></text-button>
     </div>
   `,
 }
 
 export const IconButton = {
   render: () => html` <div style="display:flex">
-    <outline-button style="margin-right:6px" size="lg">
-      <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
-    </outline-button>
-    <outline-button style="margin-right:6px" size="lg" label="Click Me!">
-      <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
-    </outline-button>
-    <outline-button style="margin-right:6px" size="lg" label="Click Me!">
-      <plus-icon slot="rightIcon" color="#1DB177"></plus-icon>
-    </outline-button>
+    <text-button style="margin-right:6px" size="lg">
+      <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
+    </text-button>
+    <text-button style="margin-right:6px" size="lg" label="Click Me!">
+      <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
+    </text-button>
+    <text-button style="margin-right:6px" size="lg" label="Click Me!">
+      <!-- <plus-icon slot="rightIcon" color="#1DB177"></plus-icon> -->
+    </text-button>
   </div>`,
 }

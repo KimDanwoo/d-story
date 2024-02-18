@@ -1,7 +1,7 @@
 import { html } from 'lit'
 import { Meta, StoryObj } from '@storybook/web-components'
-import '../components/Col/index'
-import { ColProps } from '../components/Col/index'
+import './index'
+import { ColProps } from './index'
 
 const meta = {
   title: 'Components/Col',

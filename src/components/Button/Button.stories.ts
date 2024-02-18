@@ -1,9 +1,9 @@
-import { Button } from './../components/Button/Button'
+import { Button } from './Button'
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from '../components/Button/Button'
-import '../components/Button/Button'
+import type { ButtonProps } from './Button'
+import './Button'
 import { html } from 'lit'
-import '../components/Icons/PlusIcon'
+// import '../Icons/PlusIcon'
 
 const Template = (args: ButtonProps) => html`
   <base-button
@@ -161,13 +161,13 @@ export const ButtonSize = {
 export const IconButton = {
   render: () => html` <div style="display:flex">
     <base-button style="margin-right:6px" size="md">
-      <plus-icon slot="leftIcon"></plus-icon>
+      <!-- <plus-icon slot="leftIcon"></plus-icon> -->
     </base-button>
     <base-button style="margin-right:6px" size="md" label="Click Me!">
-      <plus-icon slot="leftIcon"></plus-icon>
+      <!-- <plus-icon slot="leftIcon"></plus-icon> -->
     </base-button>
     <base-button style="margin-right:6px" size="md" label="Click Me!">
-      <plus-icon slot="rightIcon"></plus-icon>
+      <!-- <plus-icon slot="rightIcon"></plus-icon> -->
     </base-button>
   </div>`,
 }

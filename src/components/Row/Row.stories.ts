@@ -1,7 +1,7 @@
 import { html } from 'lit'
 import { Meta, StoryObj } from '@storybook/web-components'
-import '../components/Row/Row'
-import { RowProps } from '../components/Row/Row'
+import './Row'
+import { RowProps } from './Row'
 
 const meta = {
   title: 'Components/Row',
