@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { InputProps } from '../components/Input/Input'
-import '../components/Input/Input'
+import type { InputProps } from './Input'
+import './Input'
 import { html } from 'lit'
 
 const Template = (args: InputProps) => html`

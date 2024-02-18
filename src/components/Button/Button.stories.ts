@@ -1,9 +1,9 @@
-import { Button } from './../components/Button/Button'
+import { Button } from './Button'
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from '../components/Button/Button'
-import '../components/Button/Button'
+import type { ButtonProps } from './Button'
+import './Button'
 import { html } from 'lit'
-import '../components/Icons/PlusIcon'
+import '../Icons/PlusIcon'
 
 const Template = (args: ButtonProps) => html`
   <base-button
