@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components'
 import type { ButtonProps } from '../Button/Button'
 import './TextButton'
 import { html } from 'lit'
-import '../Icons/PlusIcon'
+// import '../Icons/PlusIcon'
 
 const Template = (args: ButtonProps) => html`
   <text-button
@@ -127,13 +127,13 @@ export const Gray = {
 export const IconButton = {
   render: () => html` <div style="display:flex">
     <text-button style="margin-right:6px" size="lg">
-      <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
+      <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
     </text-button>
     <text-button style="margin-right:6px" size="lg" label="Click Me!">
-      <plus-icon slot="leftIcon" color="#1DB177"></plus-icon>
+      <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
     </text-button>
     <text-button style="margin-right:6px" size="lg" label="Click Me!">
-      <plus-icon slot="rightIcon" color="#1DB177"></plus-icon>
+      <!-- <plus-icon slot="rightIcon" color="#1DB177"></plus-icon> -->
     </text-button>
   </div>`,
 }

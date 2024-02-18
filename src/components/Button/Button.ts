@@ -1,4 +1,4 @@
-import { html, unsafeCSS } from 'lit'
+import { html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { styleMap } from 'lit/directives/style-map.js'
 import styles from './button.css?inline'
@@ -18,8 +18,7 @@ export interface ButtonProps {
 
 @customElement('base-button')
 export class Button extends TailwindElement(styles) {
-  @property({ type: String }) color?: 'primary' | 'secondary' | 'gray' =
-    'primary'
+  @property({ type: String }) color?: 'primary' | 'secondary' | 'gray' = 'primary'
   @property({ type: String }) backgroundColor?: string
   @property({ type: String }) size?: 'sm' | 'md' | 'lg' | 'xl' = 'md'
   @property({ type: String }) type?: 'basic' | 'solid' | 'round' = 'basic'
