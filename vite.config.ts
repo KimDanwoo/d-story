@@ -1,6 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import svg from 'vite-plugin-svgo'
-const path = require('path')
+import { resolve } from 'path'
 
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
@@ -10,7 +10,7 @@ export default defineConfig(({ command, mode }) => {
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '/src'),
+        '@': resolve(__dirname, '/src'),
       },
     },
     build: {
