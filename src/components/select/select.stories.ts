@@ -27,9 +27,6 @@ const options = [
   { value: 'yahoo.com', label: 'Yahoo' },
   { value: 'hanmail.net', label: 'Hanmail' },
   { value: 'nate.com', label: 'Nate' },
-  { value: 'outlook.com', label: 'Outlook' },
-  { value: 'icloud.com', label: 'iCloud' },
-  { value: 'aol.com', label: 'AOL' },
 ]
 
 const meta = {
