@@ -1,690 +1,706 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
-import { html } from 'lit';
-import '../../components/icon/icon';
+import type { Meta, StoryObj } from '@storybook/web-components'
+import { html } from 'lit'
+import '../../components/icon/icon'
 
 const Template = () => html`
   <div>
-    <p class="trg-14 my-5 text-[#777777]">피터팬 플랫폼에서 사용되는 아이콘을 정의합니다.</p>
+    <p class="trg-14 my-5 text-[#777777]">
+      피터팬 플랫폼에서 사용되는 아이콘을 정의합니다.
+    </p>
     <h2 class="tbd-16">01_Users</h2>
-    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
+    <div
+      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
+    >
       <div class="flex flex-col w-[60px] justify-center items-center">
-        <dwc-icon name="User"></dwc-icon>
+        <icon name="User"></icon>
         <div class="trg-12">User</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="UserFill"></dwc-icon>
+        <icon name="UserFill"></icon>
         <div class="trg-12">UserFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Gender"></dwc-icon>
+        <icon name="Gender"></icon>
         <div class="trg-12">Gender</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Roommate"></dwc-icon>
+        <icon name="Roommate"></icon>
         <div class="trg-12">Roommate</div>
       </div>
     </div>
     <h2 class="tbd-16">02_Arrows</h2>
-    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
+    <div
+      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
+    >
       <div class="flex flex-col w-[60px] justify-center items-center">
-        <dwc-icon name="ArrowExchangeHorizontal"></dwc-icon>
+        <icon name="ArrowExchangeHorizontal"></icon>
         <div class="trg-12">ArrowExchangeHorizontal</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ArrowExchangeVertical"></dwc-icon>
+        <icon name="ArrowExchangeVertical"></icon>
         <div class="trg-12">ArrowExchangeVertical</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ArrowDown"></dwc-icon>
+        <icon name="ArrowDown"></icon>
         <div class="trg-12">ArrowDown</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ArrowUp"></dwc-icon>
+        <icon name="ArrowUp"></icon>
         <div class="trg-12">ArrowUp</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ArrowRight"></dwc-icon>
+        <icon name="ArrowRight"></icon>
         <div class="trg-12">ArrowRight</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ArrowLeft"></dwc-icon>
+        <icon name="ArrowLeft"></icon>
         <div class="trg-12">ArrowLeft</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ShevronDown"></dwc-icon>
+        <icon name="ShevronDown"></icon>
         <div class="trg-12">ShevronDown</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ShevronUp"></dwc-icon>
+        <icon name="ShevronUp"></icon>
         <div class="trg-12">ShevronUp</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ShevronRight"></dwc-icon>
+        <icon name="ShevronRight"></icon>
         <div class="trg-12">ShevronRight</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ShevronLeft"></dwc-icon>
+        <icon name="ShevronLeft"></icon>
         <div class="trg-12">ShevronLeft</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ShevronDoubleLeft"></dwc-icon>
+        <icon name="ShevronDoubleLeft"></icon>
         <div class="trg-12">ShevronDoubleLeft</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ShevronDoubleRight"></dwc-icon>
+        <icon name="ShevronDoubleRight"></icon>
         <div class="trg-12">ShevronDoubleRight</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Repeat"></dwc-icon>
+        <icon name="Repeat"></icon>
         <div class="trg-12">Repeat</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Reset"></dwc-icon>
+        <icon name="Reset"></icon>
         <div class="trg-12">Reset</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ZoomIn"></dwc-icon>
+        <icon name="ZoomIn"></icon>
         <div class="trg-12">ZoomIn</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Download"></dwc-icon>
+        <icon name="Download"></icon>
         <div class="trg-12">Download</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Upload"></dwc-icon>
+        <icon name="Upload"></icon>
         <div class="trg-12">Upload</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Share"></dwc-icon>
+        <icon name="Share"></icon>
         <div class="trg-12">Share</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="CaretDownFill"></dwc-icon>
+        <icon name="CaretDownFill"></icon>
         <div class="trg-12">CaretDownFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="CaretDownFillSmall"></dwc-icon>
+        <icon name="CaretDownFillSmall"></icon>
         <div class="trg-12">CaretDownFillSmall</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ChangeMeasure"></dwc-icon>
+        <icon name="ChangeMeasure"></icon>
         <div class="trg-12">ChangeMeasure</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ChangeSqaremeter"></dwc-icon>
+        <icon name="ChangeSqaremeter"></icon>
         <div class="trg-12">ChangeSqaremeter</div>
       </div>
     </div>
 
     <h2 class="tbd-16">03_Interfaces</h2>
-    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
+    <div
+      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
+    >
       <div class="flex flex-col w-[60px] justify-center items-center">
-        <dwc-icon name="Backspace"></dwc-icon>
+        <icon name="Backspace"></icon>
         <div class="trg-12">Backspace</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="SettingFill"></dwc-icon>
+        <icon name="SettingFill"></icon>
         <div class="trg-12">SettingFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Setting"></dwc-icon>
+        <icon name="Setting"></icon>
         <div class="trg-12">Setting</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HamburgerMenu"></dwc-icon>
+        <icon name="HamburgerMenu"></icon>
         <div class="trg-12">HamburgerMenu</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Menu"></dwc-icon>
+        <icon name="Menu"></icon>
         <div class="trg-12">Menu</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="List"></dwc-icon>
+        <icon name="List"></icon>
         <div class="trg-12">List</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="MenuFill"></dwc-icon>
+        <icon name="MenuFill"></icon>
         <div class="trg-12">MenuFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ListFill"></dwc-icon>
+        <icon name="ListFill"></icon>
         <div class="trg-12">ListFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ImageView"></dwc-icon>
+        <icon name="ImageView"></icon>
         <div class="trg-12">ImageView</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Search"></dwc-icon>
+        <icon name="Search"></icon>
         <div class="trg-12">Search</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Filter"></dwc-icon>
+        <icon name="Filter"></icon>
         <div class="trg-12">Filter</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HeartFill"></dwc-icon>
+        <icon name="HeartFill"></icon>
         <div class="trg-12">HeartFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Heart"></dwc-icon>
+        <icon name="Heart"></icon>
         <div class="trg-12">Heart</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Check"></dwc-icon>
+        <icon name="Check"></icon>
         <div class="trg-12">Check</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="CheckCircleFill"></dwc-icon>
+        <icon name="CheckCircleFill"></icon>
         <div class="trg-12">CheckCircleFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Calender"></dwc-icon>
+        <icon name="Calender"></icon>
         <div class="trg-12">Calender</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Calender02"></dwc-icon>
+        <icon name="Calender02"></icon>
         <div class="trg-12">Calender02</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="CameraFill"></dwc-icon>
+        <icon name="CameraFill"></icon>
         <div class="trg-12">CameraFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Camera"></dwc-icon>
+        <icon name="Camera"></icon>
         <div class="trg-12">Camera</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Complain"></dwc-icon>
+        <icon name="Complain"></icon>
         <div class="trg-12">Complain</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="File"></dwc-icon>
+        <icon name="File"></icon>
         <div class="trg-12">File</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Plus"></dwc-icon>
+        <icon name="Plus"></icon>
         <div class="trg-12">Plus</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Minus"></dwc-icon>
+        <icon name="Minus"></icon>
         <div class="trg-12">Minus</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Xmark"></dwc-icon>
+        <icon name="Xmark"></icon>
         <div class="trg-12">Xmark</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="DotMenuHorizon"></dwc-icon>
+        <icon name="DotMenuHorizon"></icon>
         <div class="trg-12">DotMenuHorizon</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="DotMenuVertical"></dwc-icon>
+        <icon name="DotMenuVertical"></icon>
         <div class="trg-12">DotMenuVertical</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Home"></dwc-icon>
+        <icon name="Home"></icon>
         <div class="trg-12">Home</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HomeFill"></dwc-icon>
+        <icon name="HomeFill"></icon>
         <div class="trg-12">HomeFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HomeCheck"></dwc-icon>
+        <icon name="HomeCheck"></icon>
         <div class="trg-12">HomeCheck</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoomOut"></dwc-icon>
+        <icon name="RoomOut"></icon>
         <div class="trg-12">RoomOut</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoomRegeister"></dwc-icon>
+        <icon name="RoomRegeister"></icon>
         <div class="trg-12">RoomRegeister</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoomManage"></dwc-icon>
+        <icon name="RoomManage"></icon>
         <div class="trg-12">RoomManage</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoomSearch"></dwc-icon>
+        <icon name="RoomSearch"></icon>
         <div class="trg-12">RoomSearch</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HomeSearch"></dwc-icon>
+        <icon name="HomeSearch"></icon>
         <div class="trg-12">HomeSearch</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HomeHeart"></dwc-icon>
+        <icon name="HomeHeart"></icon>
         <div class="trg-12">HomeHeart</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HomeTime"></dwc-icon>
+        <icon name="HomeTime"></icon>
         <div class="trg-12">HomeTime</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="HomeCall"></dwc-icon>
+        <icon name="HomeCall"></icon>
         <div class="trg-12"></div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Help"></dwc-icon>
+        <icon name="Help"></icon>
         <div class="trg-12">Help</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Password"></dwc-icon>
+        <icon name="Password"></icon>
         <div class="trg-12">Password</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Information"></dwc-icon>
+        <icon name="Information"></icon>
         <div class="trg-12">Information</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="InformationFill"></dwc-icon>
+        <icon name="InformationFill"></icon>
         <div class="trg-12">InformationFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Image"></dwc-icon>
+        <icon name="Image"></icon>
         <div class="trg-12">Image</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ImageSlash"></dwc-icon>
+        <icon name="ImageSlash"></icon>
         <div class="trg-12">ImageSlash</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="CallFill"></dwc-icon>
+        <icon name="CallFill"></icon>
         <div class="trg-12">CallFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Call"></dwc-icon>
+        <icon name="Call"></icon>
         <div class="trg-12">Call</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="">Subcall</dwc-icon>
+        <icon name="">Subcall</icon>
         <div class="trg-12">Subcall</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="MessageFill"></dwc-icon>
+        <icon name="MessageFill"></icon>
         <div class="trg-12">MessageFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Message"></dwc-icon>
+        <icon name="Message"></icon>
         <div class="trg-12">Message</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="InquiryFill"></dwc-icon>
+        <icon name="InquiryFill"></icon>
         <div class="trg-12">InquiryFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Inquiry"></dwc-icon>
+        <icon name="Inquiry"></icon>
         <div class="trg-12">Inquiry</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="ChatFill"></dwc-icon>
+        <icon name="ChatFill"></icon>
         <div class="trg-12">ChatFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Chat"></dwc-icon>
+        <icon name="Chat"></icon>
         <div class="trg-12">Chat</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="SendFill"></dwc-icon>
+        <icon name="SendFill"></icon>
         <div class="trg-12">SendFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Send"></dwc-icon>
+        <icon name="Send"></icon>
         <div class="trg-12">Send</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Emoji"></dwc-icon>
+        <icon name="Emoji"></icon>
         <div class="trg-12">Emoji</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="EmojiFill"></dwc-icon>
+        <icon name="EmojiFill"></icon>
         <div class="trg-12">EmojiFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Mobile"></dwc-icon>
+        <icon name="Mobile"></icon>
         <div class="trg-12">Mobile</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Copy"></dwc-icon>
+        <icon name="Copy"></icon>
         <div class="trg-12">Copy</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Comment"></dwc-icon>
+        <icon name="Comment"></icon>
         <div class="trg-12">Comment</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Notice"></dwc-icon>
+        <icon name="Notice"></icon>
         <div class="trg-12">Notice</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Member"></dwc-icon>
+        <icon name="Member"></icon>
         <div class="trg-12">Member</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Event"></dwc-icon>
+        <icon name="Event"></icon>
         <div class="trg-12">Event</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="BizKakao"></dwc-icon>
+        <icon name="BizKakao"></icon>
         <div class="trg-12">BizKakao</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Question"></dwc-icon>
+        <icon name="Question"></icon>
         <div class="trg-12">Question</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="QuestionMarkFill"></dwc-icon>
+        <icon name="QuestionMarkFill"></icon>
         <div class="trg-12">QuestionMarkFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="QuestionMark"></dwc-icon>
+        <icon name="QuestionMark"></icon>
         <div class="trg-12">QuestionMark</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="WarningFill"></dwc-icon>
+        <icon name="WarningFill"></icon>
         <div class="trg-12">WarningFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Warning"></dwc-icon>
+        <icon name="Warning"></icon>
         <div class="trg-12">Warning</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Time"></dwc-icon>
+        <icon name="Time"></icon>
         <div class="trg-12">Time</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="View"></dwc-icon>
+        <icon name="View"></icon>
         <div class="trg-12">View</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Premium"></dwc-icon>
+        <icon name="Premium"></icon>
         <div class="trg-12">Premium</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="PlusCircleFill"></dwc-icon>
+        <icon name="PlusCircleFill"></icon>
         <div class="trg-12">PlusCircleFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="XmarkCircleFill"></dwc-icon>
+        <icon name="XmarkCircleFill"></icon>
         <div class="trg-12">XmarkCircleFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Thumb"></dwc-icon>
+        <icon name="Thumb"></icon>
         <div class="trg-12">Thumb</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Exit"></dwc-icon>
+        <icon name="Exit"></icon>
         <div class="trg-12">Exit</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="LicenseFill"></dwc-icon>
+        <icon name="LicenseFill"></icon>
         <div class="trg-12">LicenseFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Spinner"></dwc-icon>
+        <icon name="Spinner"></icon>
         <div class="trg-12">Spinner</div>
       </div>
     </div>
 
     <h2 class="tbd-16">04_Location</h2>
-    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
+    <div
+      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
+    >
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Gps"></dwc-icon>
+        <icon name="Gps"></icon>
         <div class="trg-12">Gps</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="MapFill"></dwc-icon>
+        <icon name="MapFill"></icon>
         <div class="trg-12">MapFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Map"></dwc-icon>
+        <icon name="Map"></icon>
         <div class="trg-12">Map</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Metro"></dwc-icon>
+        <icon name="Metro"></icon>
         <div class="trg-12">Metro</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="MetroFill"></dwc-icon>
+        <icon name="MetroFill"></icon>
         <div class="trg-12">MetroFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoadView"></dwc-icon>
+        <icon name="RoadView"></icon>
         <div class="trg-12">RoadView</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Location"></dwc-icon>
+        <icon name="Location"></icon>
         <div class="trg-12">Location</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="LocationFill"></dwc-icon>
+        <icon name="LocationFill"></icon>
         <div class="trg-12">LocationFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="LocationUnderline"></dwc-icon>
+        <icon name="LocationUnderline"></icon>
         <div class="trg-12">LocationUnderline</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="University"></dwc-icon>
+        <icon name="University"></icon>
         <div class="trg-12">University</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="UniversityFill"></dwc-icon>
+        <icon name="UniversityFill"></icon>
         <div class="trg-12">UniversityFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoomNumber"></dwc-icon>
+        <icon name="RoomNumber"></icon>
         <div class="trg-12">RoomNumber</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Apt"></dwc-icon>
+        <icon name="Apt"></icon>
         <div class="trg-12">Apt</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Officetels"></dwc-icon>
+        <icon name="Officetels"></icon>
         <div class="trg-12">Officetels</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="AgentFill"></dwc-icon>
+        <icon name="AgentFill"></icon>
         <div class="trg-12">AgentFill</div>
       </div>
     </div>
 
     <h2 class="tbd-16">05_Room Option</h2>
-    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
+    <div
+      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
+    >
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Road"></dwc-icon>
+        <icon name="Road"></icon>
         <div class="trg-12">Road</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Toilet"></dwc-icon>
+        <icon name="Toilet"></icon>
         <div class="trg-12">Toilet</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Elevator"></dwc-icon>
+        <icon name="Elevator"></icon>
         <div class="trg-12">Elevator</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="NewBuild"></dwc-icon>
+        <icon name="NewBuild"></icon>
         <div class="trg-12">NewBuild</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Bank"></dwc-icon>
+        <icon name="Bank"></icon>
         <div class="trg-12">Bank</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="FullOption"></dwc-icon>
+        <icon name="FullOption"></icon>
         <div class="trg-12">FullOption</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Parking"></dwc-icon>
+        <icon name="Parking"></icon>
         <div class="trg-12">Parking</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Pet"></dwc-icon>
+        <icon name="Pet"></icon>
         <div class="trg-12">Pet</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Study"></dwc-icon>
+        <icon name="Study"></icon>
         <div class="trg-12">Study</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="DeliveryFood"></dwc-icon>
+        <icon name="DeliveryFood"></icon>
         <div class="trg-12">DeliveryFood</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Parcel"></dwc-icon>
+        <icon name="Parcel"></icon>
         <div class="trg-12">Parcel</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="BuildType"></dwc-icon>
+        <icon name="BuildType"></icon>
         <div class="trg-12">BuildType</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Floor"></dwc-icon>
+        <icon name="Floor"></icon>
         <div class="trg-12">Floor</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoomCount"></dwc-icon>
+        <icon name="RoomCount"></icon>
         <div class="trg-12">RoomCount</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="RoomSize"></dwc-icon>
+        <icon name="RoomSize"></icon>
         <div class="trg-12">RoomSize</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Vacancy"></dwc-icon>
+        <icon name="Vacancy"></icon>
         <div class="trg-12">Vacancy</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Fee"></dwc-icon>
+        <icon name="Fee"></icon>
         <div class="trg-12">Fee</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Shower"></dwc-icon>
+        <icon name="Shower"></icon>
         <div class="trg-12">Shower</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="WindowInside"></dwc-icon>
+        <icon name="WindowInside"></icon>
         <div class="trg-12">WindowInside</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="WindowOutside"></dwc-icon>
+        <icon name="WindowOutside"></icon>
         <div class="trg-12">WindowOutside</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="AirConditionerairConditioner"></dwc-icon>
+        <icon name="AirConditionerairConditioner"></icon>
         <div class="trg-12">AirConditionerairConditioner</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Heating"></dwc-icon>
+        <icon name="Heating"></icon>
         <div class="trg-12">Heating</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Internet"></dwc-icon>
+        <icon name="Internet"></icon>
         <div class="trg-12">Internet</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Option"></dwc-icon>
+        <icon name="Option"></icon>
         <div class="trg-12">Option</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Meal"></dwc-icon>
+        <icon name="Meal"></icon>
         <div class="trg-12">Meal</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="PersonalFacility"></dwc-icon>
+        <icon name="PersonalFacility"></icon>
         <div class="trg-12">PersonalFacility</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Safety"></dwc-icon>
+        <icon name="Safety"></icon>
         <div class="trg-12">Safety</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Amenity"></dwc-icon>
+        <icon name="Amenity"></icon>
         <div class="trg-12">Amenity</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Terrace"></dwc-icon>
+        <icon name="Terrace"></icon>
         <div class="trg-12">Terrace</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="CommonFacility"></dwc-icon>
+        <icon name="CommonFacility"></icon>
         <div class="trg-12">CommonFacility</div>
       </div>
     </div>
 
     <h2 class="tbd-16">06_Room Type</h2>
-    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
+    <div
+      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
+    >
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Villa"></dwc-icon>
+        <icon name="Villa"></icon>
         <div class="trg-12">Villa</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Flat"></dwc-icon>
+        <icon name="Flat"></icon>
         <div class="trg-12">Flat</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Apartment"></dwc-icon>
+        <icon name="Apartment"></icon>
         <div class="trg-12">Apartment</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Office"></dwc-icon>
+        <icon name="Office"></icon>
         <div class="trg-12">Office</div>
       </div>
     </div>
 
     <h2 class="tbd-16">07_Social</h2>
-    <div class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]">
+    <div
+      class="grid grid-cols-6 gap-y-[20px] place-items-center mb-[40px] py-[20px] px-[20px]"
+    >
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Cafe"></dwc-icon>
+        <icon name="Cafe"></icon>
         <div class="trg-12">Cafe</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="CafeFill"></dwc-icon>
+        <icon name="CafeFill"></icon>
         <div class="trg-12">CafeFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Blog"></dwc-icon>
+        <icon name="Blog"></icon>
         <div class="trg-12">Blog</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Facebook"></dwc-icon>
+        <icon name="Facebook"></icon>
         <div class="trg-12">Facebook</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="FacebookFill"></dwc-icon>
+        <icon name="FacebookFill"></icon>
         <div class="trg-12">FacebookFill</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Instagram"></dwc-icon>
+        <icon name="Instagram"></icon>
         <div class="trg-12">Instagram</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Kakao"></dwc-icon>
+        <icon name="Kakao"></icon>
         <div class="trg-12">Kakao</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Naver"></dwc-icon>
+        <icon name="Naver"></icon>
         <div class="trg-12">Naver</div>
       </div>
       <div class="flex flex-col w-[60px] justify-center items-center ">
-        <dwc-icon name="Apple"></dwc-icon>
+        <icon name="Apple"></icon>
         <div class="trg-12">Apple</div>
       </div>
     </div>
   </div>
-`;
+`
 
 const meta = {
   title: 'Foundations/Iconography',
   tags: ['autodocs'],
   render: Template,
-} satisfies Meta;
-export default meta;
+} satisfies Meta
+export default meta
 
-type Story = StoryObj;
+type Story = StoryObj
 
-export const Default: Story = {};
+export const Default: Story = {}

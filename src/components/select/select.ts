@@ -9,7 +9,7 @@ type optionProps = {
   label: string
 }
 
-@customElement('dwc-select')
+@customElement('base-select')
 export class Select extends TailwindElement(styles) {
   @property({ type: String }) type?: 'basic' | 'underline' = 'basic'
   @property({ type: String }) label: string = ''
@@ -53,8 +53,7 @@ export class Select extends TailwindElement(styles) {
       this._options = [{ value: '', label: this.placeholder }, ...this.options]
     }
     if (changedProperties.has('value')) {
-      const label =
-        this.options.find((option) => option.value === this.value)?.label || ''
+      const label = this.options.find((option) => option.value === this.value)?.label || ''
       this._label = label
     }
     if (changedProperties.has('_isOpenOption')) {
@@ -63,22 +62,15 @@ export class Select extends TailwindElement(styles) {
   }
 
   protected getSelectTextColorClass(): string {
-    const emptyColor =
-      this.value === '' && this.isError ? 'error' : 'not-selected'
+    const emptyColor = this.value === '' && this.isError ? 'error' : 'not-selected'
     const colorClass = this.value !== '' ? 'selected' : emptyColor || ''
     return colorClass
   }
 
   protected render(): TemplateResult {
-    const getClass = (isClass: Boolean, className: string) =>
-      isClass ? className : ''
-    const selectClass = `${getClass(this._isOpenOption, 'open')} ${getClass(
-      this.disabled,
-      'disabled'
-    )}`
-    const iconClass = `${getClass(this.isError, 'error')} ${
-      this.type
-    } ${getClass(this._isOpenOption, 'reverse')}`
+    const getClass = (isClass: Boolean, className: string) => (isClass ? className : '')
+    const selectClass = `${getClass(this._isOpenOption, 'open')} ${getClass(this.disabled, 'disabled')}`
+    const iconClass = `${getClass(this.isError, 'error')} ${this.type} ${getClass(this._isOpenOption, 'reverse')}`
 
     return html`
       <div
@@ -90,15 +82,10 @@ export class Select extends TailwindElement(styles) {
         @mousedown=${this._handleMousedown}
       >
         ${this._selectLabel()}
-        <div
-          class="select select--${this
-            .type} ${this.getSelectTextColorClass()} ${selectClass}"
-        >
-          <p class="selected-value">
-            ${this._label !== '' ? this._label : this.placeholder}
-          </p>
+        <div class="select select--${this.type} ${this.getSelectTextColorClass()} ${selectClass}">
+          <p class="selected-value">${this._label !== '' ? this._label : this.placeholder}</p>
           ${this._customOptions()}
-          <dwc-icon name="ShevronDown" class="icon ${iconClass}" />
+          <base-icon name="ShevronDown" class="icon ${iconClass}" />
         </div>
       </div>
     `
@@ -125,10 +112,7 @@ export class Select extends TailwindElement(styles) {
   }
 
   protected _selectLabel = () => {
-    return (
-      this.label &&
-      html`<p class="label ${this.isError ? 'error' : ''}">${this.label}</p>`
-    )
+    return this.label && html`<p class="label ${this.isError ? 'error' : ''}">${this.label}</p>`
   }
 
   protected _optionClass(idx: number, label: string): string {
@@ -208,9 +192,7 @@ export class Select extends TailwindElement(styles) {
   protected _handleMouseOver(event: MouseEvent): void {
     event.preventDefault()
     event.stopPropagation()
-    this._selectedIndex = Number(
-      (event.target as HTMLSelectElement).dataset.index
-    )
+    this._selectedIndex = Number((event.target as HTMLSelectElement).dataset.index)
   }
 
   protected _handleFocus(): void {
@@ -243,10 +225,7 @@ export class Select extends TailwindElement(styles) {
       if (!this.optionDom || !this.box) return
       this.optionsHeight = this.optionDom.getBoundingClientRect().height
       this.boxBottom = this.box.getBoundingClientRect().bottom
-      this.optionDom.style.top = this._calculateMenuOffsetTop(
-        this.boxBottom,
-        this.optionsHeight
-      )
+      this.optionDom.style.top = this._calculateMenuOffsetTop(this.boxBottom, this.optionsHeight)
     })
   }
 
@@ -255,6 +234,6 @@ export class Select extends TailwindElement(styles) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'dwc-select': Select
+    'base-select': Select
   }
 }
