@@ -12,7 +12,9 @@
     "chromatic": "npx chromatic --project-token=chpt_defb16b9e5c3de8"
   },
   "dependencies": {
-    "lit": "^3.0.2"
+    "lit": "^3.0.2",
+    "tar": "^6.2.0",
+    "vite-plugin-svgo": "^1.4.0"
   },
   "devDependencies": {
     "@lit/react": "^1.0.2",
@@ -22,10 +24,11 @@
     "@storybook/web-components": "^7.5.3",
     "@storybook/web-components-vite": "^7.5.3",
     "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.33",
     "chromatic": "^10.2.0",
+    "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.71.0",
     "storybook": "^7.5.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
