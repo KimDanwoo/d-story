@@ -42,7 +42,7 @@
     "@storybook/web-components": "^7.5.3",
     "@storybook/web-components-vite": "^7.5.3",
     "autoprefixer": "^10.4.17",
-    "chromatic": "^10.2.0",
+    "chromatic": "^10.9.6",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.33",
