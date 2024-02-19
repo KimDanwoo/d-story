@@ -32,6 +32,7 @@ jobs:
       #   with:
       #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       #     token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: 'package.json에 chromatic URL 업데이트'
         run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
