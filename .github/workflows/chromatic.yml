@@ -37,8 +37,6 @@ jobs:
         run: npm publish --access public
       - name: Restore package.json
         run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
-      - name: Copy build to dist
-        run: cp -R build/* dist/
       - name: Configure Git
         run: |
           git config --global user.name "KimDanwoo"
