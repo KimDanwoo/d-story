@@ -21,6 +21,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
+      - name: Setup .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
       - name: install
         run: npm i
       - name: Publish to Chromatic
@@ -31,11 +33,10 @@ jobs:
       - name: 'package.json에 chromatic URL 업데이트'
         run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
-      - name: Setup .npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      - name: 'publish'
+        run: npm run publish
       - name: Restore package.json
-        run: |
-          sed -i "s|${{ steps.chromatic.outputs.storybookUrl }}|CHROMATIC_HOMEPAGE|" package.json
+        run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
       - name: Copy build to dist
         run: cp -R build/* dist/
       - name: Configure Git
