@@ -1,15 +1,13 @@
-
 # Workflow name
 name: 'Chromatic Deployment'
 
-# Event for the workflow
 on:
   push:
-    branches: [ deploy ]
-  pull_request:
-    branches: [ deploy ]
+    branches:
+      - deploy
+  # pull_request:
+  #   branches: [deploy]
 
-# List of jobs
 jobs:
   test:
     # Operating System
@@ -27,10 +25,19 @@ jobs:
         run: npm i
       - name: Publish to Chromatic
         uses: chromaui/action@latest
-        # Options required for Chromatic's GitHub Action
         with:
-          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/ko/deploy/ to obtain it
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          # storybookBuildDir: storybook-static
-          # workingDir: packages/storybook
+      - run: |
+          sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
+      - run: yarn publish:npm-outDir
+      - run: |
+          sed -i "s|${{ steps.chromatic.outputs.storybookUrl }}|CHROMATIC_HOMEPAGE|" package.json
+      - run: cp -R build/* dist/
+      - run: |
+          git config --global user.name "KimDanwoo"
+          git config --global user.email "dudgh9198@naver.com"
+      - run: |
+          git add dist
+          git commit -am 'build: automate deploy dist'
+          git push -f https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
