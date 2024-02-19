@@ -23,10 +23,10 @@ jobs:
           node-version-file: .nvmrc
       - name: Setup .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-      # - name: npm install
-      #   run: npm i
-      # - name: npm build
-      #   run: npm run build
+      - name: npm install
+        run: npm i
+      - name: npm build
+        run: npm run build
       # - name: Chromatic에 배포하기
       #   uses: chromaui/action@latest
       #   with:
@@ -59,4 +59,4 @@ jobs:
         run: |
           git add dist
           git commit -am 'build: automate deploy dist'
-          git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:main
+          git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
