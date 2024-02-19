@@ -49,7 +49,7 @@ jobs:
       - name: 'npm에 패키지 게시하기(버전이 같다면 넘어가기)'
         if: steps.check-version.outputs.exists == 'false'
         run: npm publish --access public
-      - name: package.json URL부붙 최신화
+      - name: package.json URL부분 최신화
         run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
       - name: github 권한 설정
         run: |
