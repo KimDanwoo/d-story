@@ -25,6 +25,8 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
       - name: install
         run: npm i
+      - name: build
+        run: npm run build
       - name: Publish to Chromatic
         uses: chromaui/action@latest
         with:
@@ -57,4 +59,4 @@ jobs:
         run: |
           git add dist
           git commit -m 'build: automate deploy dist'
-          git push -f https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story HEAD:dist-build
+          git push -f https://KimDanwoo:${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
