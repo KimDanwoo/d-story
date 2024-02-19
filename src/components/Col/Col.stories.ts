@@ -11,6 +11,8 @@ const meta = {
       <p>1번 항목</p>
       <p>2번 항목</p>
       <p>3번 항목</p>
+      <p>4번 항목</p>
+      <p>5번 항목</p>
     </base-col>`,
   argTypes: {
     items: {

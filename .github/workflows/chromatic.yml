@@ -23,11 +23,11 @@ jobs:
           node-version-file: .nvmrc
       - name: Setup .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-      - name: install
+      - name: npm install
         run: npm i
-      - name: build
+      - name: npm build
         run: npm run build
-      - name: Publish to Chromatic
+      - name: Chromatic에 배포하기
         uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
       - name: 'package.json에 chromatic URL 업데이트'
         run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
-      - name: npm 버전 확인하기
+      - name: npm 버전 확인하기 (이전 버전과 다른지 확인)
         id: check-version
         run: |
           PACKAGE_NAME=$(node -p "require('./package.json').name")
@@ -49,7 +49,7 @@ jobs:
       - name: 'npm에 패키지 게시하기(버전이 같다면 넘어가기)'
         if: steps.check-version.outputs.exists == 'false'
         run: npm publish --access public
-      - name: Restore package.json
+      - name: package.json URL부붙 최신화
         run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
       - name: Configure Git
         run: |
