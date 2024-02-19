@@ -60,4 +60,4 @@ jobs:
         run: |
           git add dist
           git commit -am 'build: automate deploy dist'
-          git push https://${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
+          git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
