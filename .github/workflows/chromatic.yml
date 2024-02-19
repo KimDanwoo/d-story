@@ -27,12 +27,11 @@ jobs:
         run: npm i
       - name: npm build
         run: npm run build
-      # - name: Chromatic에 배포하기
-      #   uses: chromaui/action@latest
-      #   with:
-      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-
+      - name: Chromatic에 배포하기
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: 'package.json에 chromatic URL 업데이트'
         run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
