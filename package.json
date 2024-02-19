@@ -1,8 +1,19 @@
 {
   "name": "d-story",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.6",
   "type": "module",
+  "description": "웹 컴포넌트로 제작된 디자인 시스템",
+  "keywords": [
+    "lit",
+    "component",
+    "storybook"
+  ],
+  "main": "dist/index.js",
+  "license": "MIT",
+  "file": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,9 +24,9 @@
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
-  "lint-staged":{
-    "**/*.{tsx,ts,jsx,js}": [ 
-      "prettier --write" 
+  "lint-staged": {
+    "**/*.{tsx,ts,jsx,js}": [
+      "prettier --write"
     ]
   },
   "dependencies": {

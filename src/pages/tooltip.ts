@@ -36,13 +36,9 @@ export class SimpleTooltip extends LitElement {
       callback(tooltip)
       target.parentNode!.insertBefore(tooltip, target.nextSibling)
       tooltip.show()
-      enterEvents.forEach((eventName) =>
-        target.removeEventListener(eventName, createTooltip)
-      )
+      enterEvents.forEach((eventName) => target.removeEventListener(eventName, createTooltip))
     }
-    enterEvents.forEach((eventName) =>
-      target.addEventListener(eventName, createTooltip)
-    )
+    enterEvents.forEach((eventName) => target.addEventListener(eventName, createTooltip))
   }
 
   @property({ type: Number })
@@ -58,12 +54,8 @@ export class SimpleTooltip extends LitElement {
 
   set target(target: Element | null) {
     if (this.target) {
-      enterEvents.forEach((name) =>
-        this.target!.removeEventListener(name, this.show)
-      )
-      leaveEvents.forEach((name) =>
-        this.target!.removeEventListener(name, this.hide)
-      )
+      enterEvents.forEach((name) => this.target!.removeEventListener(name, this.show))
+      leaveEvents.forEach((name) => this.target!.removeEventListener(name, this.hide))
     }
     if (target) {
       // Add events to new target
@@ -107,11 +99,11 @@ export class SimpleTooltip extends LitElement {
   }
 
   addGlobalClickListener() {
-    document.addEventListener('click', (event: Element) => {
-      // 클릭된 요소가 이 엘리먼트 내부에 있는지 확인
-      if (!this.contains(event.target)) {
-        this.hide()
-      }
-    })
+    // document.addEventListener('click', (event: Element) => {
+    //   // 클릭된 요소가 이 엘리먼트 내부에 있는지 확인
+    //   if (!this.contains(event.target)) {
+    //     this.hide()
+    //   }
+    // })
   }
 }
