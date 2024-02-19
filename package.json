@@ -1,7 +1,7 @@
 {
   "name": "d-story",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "description": "웹 컴포넌트로 제작된 디자인 시스템",
   "keywords": [
@@ -22,7 +22,8 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_d8190730698d292",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "publish": "npm publish --access public"
   },
   "lint-staged": {
     "**/*.{tsx,ts,jsx,js}": [

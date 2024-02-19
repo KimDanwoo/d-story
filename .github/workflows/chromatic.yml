@@ -30,7 +30,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
-      - run: yarn publish:npm-outDir
+      - run: npm run publish
       - run: |
           sed -i "s|${{ steps.chromatic.outputs.storybookUrl }}|CHROMATIC_HOMEPAGE|" package.json
       - run: cp -R build/* dist/
