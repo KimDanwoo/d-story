@@ -1,0 +1,2 @@
+const homeFill = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M10.828 2.397a1.932 1.932 0 0 1 2.344 0l8.046 6.122c.492.374.782.962.782 1.586v9.912C22 21.112 21.125 22 20.046 22H3.954C2.874 22 2 21.112 2 20.017v-9.912c0-.624.29-1.212.782-1.586l8.046-6.123ZM12 15.353a.81.81 0 0 0-.805.816v4.198h1.61V16.17a.81.81 0 0 0-.805-.816" clip-rule="evenodd"/></svg>`
+export { homeFill as default }

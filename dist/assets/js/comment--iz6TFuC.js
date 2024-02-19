@@ -1,0 +1,2 @@
+const comment = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="M7 10.3a.7.7 0 0 1 .7-.7h5.6a.7.7 0 0 1 0 1.4H7.7a.7.7 0 0 1-.7-.7m.7 2.7a.7.7 0 1 0 0 1.4h8.6a.7.7 0 1 0 0-1.4H7.7Z"/><path fill="currentColor" fill-rule="evenodd" d="M21 12a9 9 0 0 1-9 9H3.7a.7.7 0 0 1-.7-.7V12a9 9 0 0 1 18 0m-9 7.6A7.6 7.6 0 1 0 4.4 12v7.6z" clip-rule="evenodd"/></svg>`
+export { comment as default }

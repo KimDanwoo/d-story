@@ -1,7 +1,7 @@
 {
   "name": "d-story",
   "private": false,
-  "version": "0.0.11",
+  "version": "0.0.12",
   "type": "module",
   "description": "웹 컴포넌트로 제작된 디자인 시스템",
   "keywords": [

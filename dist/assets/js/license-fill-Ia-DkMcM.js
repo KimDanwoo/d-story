@@ -1,0 +1,2 @@
+const licenseFill = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10"/><path fill="currentColor" fill-rule="evenodd" d="M6.375 16.809C4.317 15.182 3 12.682 3 9.878 3 4.975 7.03 1 12 1s9 3.975 9 8.878c0 2.804-1.317 5.304-3.375 6.93v5.304c0 .56-.52.98-1.076.87l-4.372-.862a.912.912 0 0 0-.354 0l-4.371.863a.897.897 0 0 1-1.077-.871v-5.303M19 9.878c0 3.922-3.024 6.93-7 6.93S5 13.8 5 9.879C5 5.955 8.024 3 12 3s7 2.955 7 6.878" clip-rule="evenodd"/></svg>`
+export { licenseFill as default }

@@ -1,0 +1,2 @@
+const time = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="M12.778 7a.778.778 0 1 0-1.556 0v5c0 .206.082.404.228.55l3.889 3.889a.778.778 0 1 0 1.1-1.1l-3.661-3.661z"/><path fill="currentColor" fill-rule="evenodd" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10m-1.556 0a8.444 8.444 0 1 1-16.888 0 8.444 8.444 0 0 1 16.888 0" clip-rule="evenodd"/></svg>`
+export { time as default }

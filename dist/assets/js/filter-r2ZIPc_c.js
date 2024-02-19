@@ -1,0 +1,2 @@
+const filter = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M8.5 10.25a3.502 3.502 0 0 0 3.355-2.5H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h2.145a3.502 3.502 0 0 0 3.355 2.5m0-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m7 12.5a3.502 3.502 0 0 0 3.355-2.5H21a1 1 0 1 0 0-2h-2.145a3.502 3.502 0 0 0-6.71 0H3a1 1 0 1 0 0 2h9.145a3.502 3.502 0 0 0 3.355 2.5m0-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" clip-rule="evenodd"/></svg>`
+export { filter as default }
