@@ -27,11 +27,11 @@ jobs:
         run: npm i
       - name: npm build
         run: npm run build
-      - name: Chromatic에 배포하기
-        uses: chromaui/action@latest
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Chromatic에 배포하기
+      #   uses: chromaui/action@latest
+      #   with:
+      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      #     token: ${{ secrets.GITHUB_TOKEN }}
       - name: 'package.json에 chromatic URL 업데이트'
         run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
@@ -51,12 +51,14 @@ jobs:
         run: npm publish --access public
       - name: package.json URL부붙 최신화
         run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
-      - name: Configure Git
-        run: |
-          git config --global user.name "KimDanwoo"
-          git config --global user.email "dudgh9198@naver.com"
+      # - name: Configure Git
+      #   run: |
+      #     git config --global user.name "KimDanwoo"
+      #     git config --global user.email "dudgh9198@naver.com"
       - name: Commit and push dist directory
         run: |
           git add dist
           git commit -am 'build: automate deploy dist'
+            git config --global user.name "KimDanwoo"
+          git config --global user.email "dudgh9198@naver.com"
           git push https://${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
