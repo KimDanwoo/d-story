@@ -33,7 +33,19 @@ jobs:
       - name: 'package.json에 chromatic URL 업데이트'
         run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
-      - name: 'publish'
+      - name: npm 버전 확인하기
+        id: check-version
+        run: |
+          PACKAGE_NAME=$(node -p "require('./package.json').name")
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          echo "Checking ${PACKAGE_NAME}@${PACKAGE_VERSION}"
+          if npm view ${PACKAGE_NAME}@${PACKAGE_VERSION} time.created; then
+            echo "::set-output name=exists::true"
+          else
+            echo "::set-output name=exists::false"
+          fi
+      - name: 'npm에 패키지 게시하기(버전이 같다면 넘어가기)'
+        if: steps.check-version.outputs.exists == 'false'
         run: npm publish --access public
       - name: Restore package.json
         run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
