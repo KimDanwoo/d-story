@@ -56,8 +56,8 @@ jobs:
         run: |
           git config --global user.name "KimDanwoo"
           git config --global user.email "dudgh9198@naver.com"
-      - name: Commit and push dist directory
-        run: |
-          git add dist
-          git commit -am 'build: automate deploy dist'
-          git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
+      # - name: Commit and push dist directory
+      #   run: |
+      #     git add dist
+      #     git commit -am 'build: automate deploy dist'
+      #     git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
