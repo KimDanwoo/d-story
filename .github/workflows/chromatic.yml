@@ -58,5 +58,5 @@ jobs:
       - name: Commit and push dist directory
         run: |
           git add dist
-          git commit -m 'build: automate deploy dist'
+          git commit -am 'build: automate deploy dist'
           git push -f https://KimDanwoo:${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
