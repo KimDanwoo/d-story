@@ -20,7 +20,6 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_d8190730698d292",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
     "publish": "npm publish --access public"

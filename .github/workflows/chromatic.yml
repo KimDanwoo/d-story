@@ -28,16 +28,24 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: |
+      - name: 'package.json에 chromatic URL 업데이트'
+        run: |
           sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
-      - run: npm run publish
-      - run: |
+      - name: 'publish'
+        run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Restore package.json
+        run: |
           sed -i "s|${{ steps.chromatic.outputs.storybookUrl }}|CHROMATIC_HOMEPAGE|" package.json
-      - run: cp -R build/* dist/
-      - run: |
+      - name: Copy build to dist
+        run: cp -R build/* dist/
+      - name: Configure Git
+        run: |
           git config --global user.name "KimDanwoo"
           git config --global user.email "dudgh9198@naver.com"
-      - run: |
+      - name: Commit and push dist directory
+        run: |
           git add dist
           git commit -am 'build: automate deploy dist'
           git push -f https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build
