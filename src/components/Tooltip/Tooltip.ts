@@ -11,7 +11,7 @@ export class SimpleTooltip extends LitElement {
       display: inline-block;
       position: fixed;
       padding: 4px;
-      border-radius: 4px;
+      border-radius: 8px;
       background: black;
       color: white;
       pointer-events: none;
@@ -33,13 +33,9 @@ export class SimpleTooltip extends LitElement {
       callback(tooltip)
       target.parentNode!.insertBefore(tooltip, target.nextSibling)
       tooltip.show()
-      enterEvents.forEach((eventName) =>
-        target.removeEventListener(eventName, createTooltip)
-      )
+      enterEvents.forEach((eventName) => target.removeEventListener(eventName, createTooltip))
     }
-    enterEvents.forEach((eventName) =>
-      target.addEventListener(eventName, createTooltip)
-    )
+    enterEvents.forEach((eventName) => target.addEventListener(eventName, createTooltip))
   }
 
   @property({ type: Number })
@@ -54,12 +50,8 @@ export class SimpleTooltip extends LitElement {
   }
   set target(target: Element | null) {
     if (this.target) {
-      enterEvents.forEach((name) =>
-        this.target!.removeEventListener(name, this.show)
-      )
-      leaveEvents.forEach((name) =>
-        this.target!.removeEventListener(name, this.hide)
-      )
+      enterEvents.forEach((name) => this.target!.removeEventListener(name, this.show))
+      leaveEvents.forEach((name) => this.target!.removeEventListener(name, this.hide))
     }
     if (target) {
       // Add events to new target

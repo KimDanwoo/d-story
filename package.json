@@ -1,7 +1,7 @@
 {
   "name": "d-story",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.12",
   "type": "module",
   "description": "웹 컴포넌트로 제작된 디자인 시스템",
   "keywords": [
@@ -20,7 +20,6 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_defb16b9e5c3de8",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
@@ -42,7 +41,7 @@
     "@storybook/web-components": "^7.5.3",
     "@storybook/web-components-vite": "^7.5.3",
     "autoprefixer": "^10.4.17",
-    "chromatic": "^10.2.0",
+    "chromatic": "^10.9.6",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.33",

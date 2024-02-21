@@ -1,0 +1,2 @@
+const plusCircleFill = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m0-14.444c.382 0 .691.31.691.69v3.063h3.062a.691.691 0 1 1 0 1.382h-3.062v3.062a.691.691 0 0 1-1.382 0v-3.062H8.247a.691.691 0 0 1 0-1.382h3.062V8.247c0-.382.31-.691.691-.691" clip-rule="evenodd"/></svg>`
+export { plusCircleFill as default }

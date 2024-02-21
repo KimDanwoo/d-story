@@ -1,14 +1,13 @@
 # Workflow name
 name: 'Chromatic Deployment'
 
-# Event for the workflow
 on:
   push:
-    branches: [develop]
+    branches:
+      - deploy
   pull_request:
-    branches: [develop]
+    branches: [deploy]
 
-# List of jobs
 jobs:
   test:
     # Operating System
@@ -22,12 +21,42 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - name: install
+      - name: Setup .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      - name: npm install
         run: npm i
-      - name: Publish to Chromatic
+      - name: npm build
+        run: npm run build
+      - name: Chromatic에 배포하기
         uses: chromaui/action@latest
-        # Options required for Chromatic's GitHub Action
         with:
-          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/ko/deploy/ to obtain it
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'package.json에 chromatic URL 업데이트'
+        run: |
+          sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|" package.json
+      - name: npm 버전 확인하기 (이전 버전과 다른지 확인)
+        id: check-version
+        run: |
+          PACKAGE_NAME=$(node -p "require('./package.json').name")
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          echo "Checking ${PACKAGE_NAME}@${PACKAGE_VERSION}"
+          if npm view ${PACKAGE_NAME}@${PACKAGE_VERSION} time.created; then
+            echo "::set-output name=exists::true"
+          else
+            echo "::set-output name=exists::false"
+          fi
+      - name: 'npm에 패키지 게시하기(버전이 같다면 넘어가기)'
+        if: steps.check-version.outputs.exists == 'false'
+        run: npm publish --access public
+      - name: package.json URL부분 최신화
+        run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
+      - name: github 권한 설정
+        run: |
+          git config --global user.name "KimDanwoo"
+          git config --global user.email "dudgh9198@naver.com"
+      - name: 배포용 dist 폴더 생성 후 배포
+        run: |
+          git add dist
+          git commit -am 'build: automate deploy dist'
+          git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:dist-build

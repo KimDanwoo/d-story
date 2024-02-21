@@ -106,7 +106,7 @@ export class Select extends TailwindElement(styles) {
             role="option"
           >
             <p>${label}</p>
-          </li>`
+          </li>`,
       )}
     </ul>`
   }

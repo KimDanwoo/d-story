@@ -6,8 +6,7 @@ import { html } from 'lit'
 const meta = {
   title: 'Components/Avatar',
   tags: ['autodocs'],
-  render: (args: AvatarProps) =>
-    html`<base-avatar link=${args.link} size=${args.size}></base-avatar>`,
+  render: (args: AvatarProps) => html`<base-avatar link=${args.link} size=${args.size}></base-avatar>`,
   argTypes: {
     size: {
       control: { type: 'select' },

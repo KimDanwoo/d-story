@@ -1,0 +1,2 @@
+const locationFill = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M13.008 21.591C15.158 19.535 20 14.411 20 9.978 20 5.572 16.418 2 12 2S4 5.572 4 9.978c0 4.434 4.842 9.557 6.992 11.613.57.545 1.447.545 2.016 0M12 12.828a2.853 2.853 0 0 0 2.857-2.85A2.854 2.854 0 0 0 12 7.128a2.853 2.853 0 0 0-2.857 2.85A2.853 2.853 0 0 0 12 12.828" clip-rule="evenodd"/></svg>`
+export { locationFill as default }
