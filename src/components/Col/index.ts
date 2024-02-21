@@ -13,9 +13,7 @@ export class Col extends LitElement {
   @property({ type: String }) content = 'start'
 
   render() {
-    return html`<div
-      class="storybook-col align-${this.items} justify-${this.content}"
-    >
+    return html`<div class="storybook-col align-${this.items} justify-${this.content}">
       <slot></slot>
     </div>`
   }

@@ -54,120 +54,62 @@ export const Default: Story = {
 }
 
 export const Primary = {
-  render: () => html` <div style="display:flex">
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="primary"
-    ></base-button>
+  render: () =>
+    html` <div style="display:flex">
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="primary"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="primary"
-      type="basic"
-    ></base-button>
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="primary" type="basic"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="primary"
-      type="round"
-    ></base-button>
-  </div>`,
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="primary" type="round"></base-button>
+    </div>`,
 }
 
 export const Secondary = {
-  render: () => html` <div style="display:flex">
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="secondary"
-    ></base-button>
+  render: () =>
+    html` <div style="display:flex">
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="secondary"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="secondary"
-      type="basic"
-    ></base-button>
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="secondary" type="basic"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="secondary"
-      type="round"
-    ></base-button>
-  </div>`,
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="secondary" type="round"></base-button>
+    </div>`,
 }
 
 export const Gray = {
-  render: () => html` <div style="display:flex">
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="gray"
-    ></base-button>
+  render: () =>
+    html` <div style="display:flex">
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="gray"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="gray"
-      type="basic"
-    ></base-button>
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="gray" type="basic"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-      color="gray"
-      type="round"
-    ></base-button>
-  </div>`,
+      <base-button style="margin-right:6px" size="lg" label="Click Me!" color="gray" type="round"></base-button>
+    </div>`,
 }
 
 export const ButtonSize = {
-  render: () => html` <div style="display:flex">
-    <base-button
-      style="margin-right:6px"
-      size="sm"
-      label="Click Me!"
-    ></base-button>
+  render: () =>
+    html` <div style="display:flex">
+      <base-button style="margin-right:6px" size="sm" label="Click Me!"></base-button>
 
-    <base-button style="margin-right:6px" label="Click Me!"></base-button>
+      <base-button style="margin-right:6px" label="Click Me!"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="lg"
-      label="Click Me!"
-    ></base-button>
+      <base-button style="margin-right:6px" size="lg" label="Click Me!"></base-button>
 
-    <base-button
-      style="margin-right:6px"
-      size="xl"
-      label="Click Me!"
-    ></base-button>
-  </div>`,
+      <base-button style="margin-right:6px" size="xl" label="Click Me!"></base-button>
+    </div>`,
 }
 
 export const IconButton = {
-  render: () => html` <div style="display:flex">
-    <base-button style="margin-right:6px" size="md">
-      <!-- <plus-icon slot="leftIcon"></plus-icon> -->
-    </base-button>
-    <base-button style="margin-right:6px" size="md" label="Click Me!">
-      <!-- <plus-icon slot="leftIcon"></plus-icon> -->
-    </base-button>
-    <base-button style="margin-right:6px" size="md" label="Click Me!">
-      <!-- <plus-icon slot="rightIcon"></plus-icon> -->
-    </base-button>
-  </div>`,
+  render: () =>
+    html` <div style="display:flex">
+      <base-button style="margin-right:6px" size="md">
+        <!-- <plus-icon slot="leftIcon"></plus-icon> -->
+      </base-button>
+      <base-button style="margin-right:6px" size="md" label="Click Me!">
+        <!-- <plus-icon slot="leftIcon"></plus-icon> -->
+      </base-button>
+      <base-button style="margin-right:6px" size="md" label="Click Me!">
+        <!-- <plus-icon slot="rightIcon"></plus-icon> -->
+      </base-button>
+    </div>`,
 }

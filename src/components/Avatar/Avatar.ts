@@ -16,12 +16,7 @@ export class Avatar extends LitElement {
   }
 
   profile = (link: string) => html`<img src=${link} />`
-  default = html`<svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    fill="none"
-    class="svg-icon"
-  >
+  default = html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" class="svg-icon">
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -32,9 +27,7 @@ export class Avatar extends LitElement {
 
   render() {
     return html`
-      <div class="storybook-avatar ${this.size}">
-        ${this.link !== '' ? this.profile(this.link) : this.default}
-      </div>
+      <div class="storybook-avatar ${this.size}">${this.link !== '' ? this.profile(this.link) : this.default}</div>
     `
   }
 

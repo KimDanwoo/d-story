@@ -15,14 +15,7 @@ export interface InputProps {
 
 @customElement('base-input')
 export class Input extends LitElement {
-  @property({ type: String }) type?:
-    | 'text'
-    | 'password'
-    | 'email'
-    | 'number'
-    | 'search'
-    | 'tel'
-    | 'url'
+  @property({ type: String }) type?: 'text' | 'password' | 'email' | 'number' | 'search' | 'tel' | 'url'
   @property({ type: String }) size?: string
   @property({ type: String }) placeholder = ''
   @property({ type: String }) value?: string
@@ -36,19 +29,13 @@ export class Input extends LitElement {
       <div>
         <input
           type=${this.type || 'text'}
-          class=${[
-            'input',
-            `input--${this.size}`,
-            `${this.isError ? 'error' : ''}`,
-          ].join(' ')}
+          class=${['input', `input--${this.size}`, `${this.isError ? 'error' : ''}`].join(' ')}
           placeholder=${this.placeholder}
           value=${this.value || ''}
           ?disabled=${this.disabled}
           @input=${this.onChange}
         />
-        ${this.isError && this.helperText
-          ? html`<p class="helper-text">${this.helperText}</p>`
-          : ''}
+        ${this.isError && this.helperText ? html`<p class="helper-text">${this.helperText}</p>` : ''}
       </div>
     `
   }

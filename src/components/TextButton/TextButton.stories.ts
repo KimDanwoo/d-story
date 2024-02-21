@@ -56,16 +56,8 @@ export const Primary = {
   render: () => html`
     <div style="display:flex">
       <text-button style="margin-right:6px" label="click me!"></text-button>
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        type="solid"
-      ></text-button>
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        type="round"
-      ></text-button>
+      <text-button style="margin-right:6px" label="click me!" type="solid"></text-button>
+      <text-button style="margin-right:6px" label="click me!" type="round"></text-button>
     </div>
   `,
 }
@@ -73,26 +65,9 @@ export const Primary = {
 export const Secondary = {
   render: () => html`
     <div style="display:flex">
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        size="lg"
-        color="secondary"
-      ></text-button>
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        size="lg"
-        color="secondary"
-        type="solid"
-      ></text-button>
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        size="lg"
-        color="secondary"
-        type="round"
-      ></text-button>
+      <text-button style="margin-right:6px" label="click me!" size="lg" color="secondary"></text-button>
+      <text-button style="margin-right:6px" label="click me!" size="lg" color="secondary" type="solid"></text-button>
+      <text-button style="margin-right:6px" label="click me!" size="lg" color="secondary" type="round"></text-button>
     </div>
   `,
 }
@@ -100,40 +75,24 @@ export const Secondary = {
 export const Gray = {
   render: () => html`
     <div style="display:flex">
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        size="lg"
-        color="gray"
-      ></text-button>
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        size="lg"
-        color="gray"
-        type="solid"
-      ></text-button>
-      <text-button
-        style="margin-right:6px"
-        label="click me!"
-        size="lg"
-        color="gray"
-        type="round"
-      ></text-button>
+      <text-button style="margin-right:6px" label="click me!" size="lg" color="gray"></text-button>
+      <text-button style="margin-right:6px" label="click me!" size="lg" color="gray" type="solid"></text-button>
+      <text-button style="margin-right:6px" label="click me!" size="lg" color="gray" type="round"></text-button>
     </div>
   `,
 }
 
 export const IconButton = {
-  render: () => html` <div style="display:flex">
-    <text-button style="margin-right:6px" size="lg">
-      <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
-    </text-button>
-    <text-button style="margin-right:6px" size="lg" label="Click Me!">
-      <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
-    </text-button>
-    <text-button style="margin-right:6px" size="lg" label="Click Me!">
-      <!-- <plus-icon slot="rightIcon" color="#1DB177"></plus-icon> -->
-    </text-button>
-  </div>`,
+  render: () =>
+    html` <div style="display:flex">
+      <text-button style="margin-right:6px" size="lg">
+        <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
+      </text-button>
+      <text-button style="margin-right:6px" size="lg" label="Click Me!">
+        <!-- <plus-icon slot="leftIcon" color="#1DB177"></plus-icon> -->
+      </text-button>
+      <text-button style="margin-right:6px" size="lg" label="Click Me!">
+        <!-- <plus-icon slot="rightIcon" color="#1DB177"></plus-icon> -->
+      </text-button>
+    </div>`,
 }
