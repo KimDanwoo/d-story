@@ -1,2 +1,0 @@
-const arrowUp = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M7.707 10.602a.961.961 0 0 1-1.414 0 1.103 1.103 0 0 1 0-1.498l5-5.294A.973.973 0 0 1 12 3.5c.265 0 .52.112.707.31l5 5.294c.39.414.39 1.084 0 1.498a.961.961 0 0 1-1.414 0L13 7.115V19.44c0 .585-.448 1.059-1 1.059s-1-.474-1-1.059V7.115l-3.293 3.486" clip-rule="evenodd"/></svg>`
-export { arrowUp as default }

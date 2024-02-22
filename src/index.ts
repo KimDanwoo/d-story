@@ -1,7 +1,6 @@
 export * from './components/button/button.ts'
 export * from './components/avatar/avatar.ts'
 export * from './components/chip/chip.ts'
-export * from './components/Row/Row.ts'
 export * from './components/input/input.ts'
 export * from './components/tooltip/tooltip.ts'
 export * from './components/select/select.ts'

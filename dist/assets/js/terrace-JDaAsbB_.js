@@ -1,2 +1,0 @@
-const terrace = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M19 4v9h1.5a.5.5 0 0 1 0 1h-1v4h.5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1h.5v-4h-1a.5.5 0 0 1 0-1H5V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1M6 4h12v9h-.5V5a.5.5 0 0 0-.5-.5H7a.5.5 0 0 0-.5.5v8H6zm10 10h2.5v4H16zm-3.5 0H15v4h-2.5zM9 14h2.5v4H9zm-1 0v4H5.5v-4zm8.5-8.5V13h-4V5.5zm-5 0h-4V13h4zM4 20v-1h16v1z" clip-rule="evenodd"/></svg>`
-export { terrace as default }

@@ -1,2 +1,0 @@
-const xmark = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M5.872 4.321a1.097 1.097 0 1 0-1.55 1.552L10.448 12l-6.127 6.127a1.097 1.097 0 1 0 1.552 1.55L12 13.552l6.127 6.128a1.097 1.097 0 1 0 1.552-1.551L13.55 12l6.128-6.127a1.097 1.097 0 1 0-1.551-1.552L12 10.45 5.872 4.32" clip-rule="evenodd"/></svg>`
-export { xmark as default }

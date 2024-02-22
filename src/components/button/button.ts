@@ -4,18 +4,6 @@ import { styleMap } from 'lit/directives/style-map.js'
 import styles from './button.css?inline'
 import TailwindElement from '../../shared/tailwind.element'
 
-export interface ButtonProps {
-  color: 'primary' | 'secondary' | 'gray'
-  backgroundColor?: string
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-  type: 'basic' | 'solid' | 'round'
-  label: string
-  disabled: boolean
-  leftIcon?: Object
-  rightIcon?: Object
-  onClick?: () => void
-}
-
 @customElement('base-button')
 export class Button extends TailwindElement(styles) {
   @property({ type: String }) color?: 'primary' | 'secondary' | 'gray' = 'primary'
@@ -33,11 +21,18 @@ export class Button extends TailwindElement(styles) {
         class=${`button button--${this.size} button--${this.color} button-${this.type}`}
         style=${styleMap({ backgroundColor: this.backgroundColor })}
         ?disabled=${this.disabled}
-        @click=${this.onClick}
+        @click=${this.onClickButton}
       >
         <slot name="leftIcon"></slot>${this.label}<slot name="rightIcon"></slot>
       </button>
     `
+  }
+
+  protected onClickButton() {
+    if (this.disabled) return
+    if (this.onClick) {
+      this.onClick()
+    }
   }
 }
 

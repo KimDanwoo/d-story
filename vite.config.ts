@@ -54,5 +54,11 @@ export default defineConfig(({ command, mode }) => {
         ],
       }),
     ],
+    test: {
+      browser: {
+        enabled: true,
+        name: 'chrome',
+      },
+    },
   }
 })

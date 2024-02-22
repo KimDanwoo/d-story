@@ -1,0 +1,2 @@
+const roomCount = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm.2-18.8v17.6H7v-4.2a.6.6 0 1 1 1.2 0v4.2h12.6V9.2h-5.2a.6.6 0 1 1 0-1.2h5.2V3.2H8.2V8h2.2a.6.6 0 1 1 0 1.2H8.2v2.2a.6.6 0 1 1-1.2 0V3.2H3.2" clip-rule="evenodd"/></svg>`
+export { roomCount as default }

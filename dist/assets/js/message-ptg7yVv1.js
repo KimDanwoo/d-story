@@ -1,2 +1,0 @@
-const message = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M2 6.286C2 5.023 2.995 4 4.222 4h15.556C21.005 4 22 5.023 22 6.286v11.428C22 18.977 21.005 20 19.778 20H4.222C2.995 20 2 18.977 2 17.714zM19.345 5.6H4.655l6.795 6.989a.763.763 0 0 0 1.1 0L19.344 5.6M3.555 6.731v10.983c0 .379.299.686.667.686h15.556a.676.676 0 0 0 .666-.686V6.731L13.65 13.72a2.288 2.288 0 0 1-3.3 0L3.556 6.731" clip-rule="evenodd"/></svg>`
-export { message as default }

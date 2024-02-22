@@ -1,0 +1,2 @@
+const checkCircleFill = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m4.793-12.39a1 1 0 1 0-1.586-1.22l-4.249 5.524-2.199-2.565a1 1 0 0 0-1.518 1.302l3 3.5a1 1 0 0 0 1.552-.041l5-6.5" clip-rule="evenodd"/></svg>`
+export { checkCircleFill as default }
