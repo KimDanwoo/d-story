@@ -2,7 +2,7 @@
 name: 'Chromatic Deployment'
 
 on:
-  merge:
+  pull_request:
     branches: [deploy]
 
 jobs:

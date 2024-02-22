@@ -1,22 +1,23 @@
+import { SIZES } from './../../constants/index'
 import { Meta, StoryObj } from '@storybook/web-components'
-import { AvatarProps } from './avatar'
+import type { Avatar } from './avatar'
 import './avatar'
 import { html } from 'lit'
 
 const meta = {
   title: 'Components/Avatar',
   tags: ['autodocs'],
-  render: (args: AvatarProps) => html`<base-avatar link=${args.link} size=${args.size}></base-avatar>`,
+  render: (args: Avatar) => html`<base-avatar link=${args.link} size=${args.size}></base-avatar>`,
   argTypes: {
     size: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg', 'xlg'],
+      options: SIZES,
     },
   },
-} satisfies Meta<AvatarProps>
+} satisfies Meta<Avatar>
 
 export default meta
-type Story = StoryObj<AvatarProps>
+type Story = StoryObj<Avatar>
 
 export const Default: Story = {
   args: {
@@ -31,7 +32,7 @@ export const DefaultImage = {
       <base-avatar size="sm" style="margin-right:12px;"></base-avatar>
       <base-avatar size="md" style="margin-right:12px;"></base-avatar>
       <base-avatar size="lg" style="margin-right:12px;"></base-avatar>
-      <base-avatar size="xlg" style="margin-right:12px;"></base-avatar>
+      <base-avatar size="xl" style="margin-right:12px;"></base-avatar>
     </div>
   `,
 }
@@ -56,12 +57,12 @@ export const HasImage = {
       ></base-avatar>
       <base-avatar
         link="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHGbemCSY3JhKeqkaa8T04WaI8QFpSII7KAw&usqp=CAU"
-        size="xlg"
+        size="xl"
         style="margin-right:12px;"
       ></base-avatar>
       <base-avatar
         link="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHGbemCSY3JhKeqkaa8T04WaI8QFpSII7KAw&usqp=CAU"
-        size="xlg"
+        size="xl"
         style="margin-right:12px;"
       ></base-avatar>
     </div>
