@@ -1,7 +1,7 @@
-import { Button } from './Button'
+import { Button } from './button'
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from './Button'
-import './Button'
+import type { ButtonProps } from './button'
+import './button'
 import { html } from 'lit'
 // import '../Icons/PlusIcon'
 

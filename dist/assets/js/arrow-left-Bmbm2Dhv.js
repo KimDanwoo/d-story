@@ -1,0 +1,2 @@
+const arrowLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M10.602 16.293a.961.961 0 0 1 0 1.414c-.414.39-1.084.39-1.498 0l-5.294-5A.973.973 0 0 1 3.5 12c0-.265.112-.52.31-.707l5.294-5a1.103 1.103 0 0 1 1.498 0 .961.961 0 0 1 0 1.414L7.115 11H19.44c.585 0 1.059.448 1.059 1s-.474 1-1.059 1H7.115l3.486 3.293" clip-rule="evenodd"/></svg>`
+export { arrowLeft as default }

@@ -1,2 +1,0 @@
-const buildType = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="M5.5 7a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5M6 9.5a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1z"/><path fill="currentColor" fill-rule="evenodd" d="M21.5 22.5a1 1 0 0 0 1-1v-12a1 1 0 0 0-1-1h-5v-6a1 1 0 0 0-1-1h-13a1 1 0 0 0-1 1v19a1 1 0 0 0 1 1zM2.7 2.7v18.6h2.8v-6.8a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6.8h2.8V2.7H2.7m8.6 18.6v-6.6H6.7v6.6zm10 0h-4.8V9.7h4.8z" clip-rule="evenodd"/></svg>`
-export { buildType as default }

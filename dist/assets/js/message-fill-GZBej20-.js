@@ -1,2 +1,0 @@
-const messageFill = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m2.2 5.337 8.15 8.383a2.288 2.288 0 0 0 3.3 0l8.15-8.383c.128.289.2.61.2.949v11.428C22 18.977 21.005 20 19.778 20H4.222C2.995 20 2 18.977 2 17.714V6.286c0-.339.072-.66.2-.949"/><path fill="currentColor" d="M3.3 4.206c.28-.132.593-.206.922-.206h15.556c.329 0 .641.074.922.206l-8.15 8.383a.763.763 0 0 1-1.1 0L3.3 4.206Z"/></svg>`
-export { messageFill as default }

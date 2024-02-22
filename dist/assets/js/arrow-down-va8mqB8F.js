@@ -1,2 +1,0 @@
-const arrowDown = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M7.707 13.399a.961.961 0 0 0-1.414 0 1.103 1.103 0 0 0 0 1.497l5 5.294c.187.198.442.31.707.31a.97.97 0 0 0 .707-.31l5-5.294c.39-.414.39-1.084 0-1.498a.961.961 0 0 0-1.414 0L13 16.886V4.559c0-.585-.448-1.059-1-1.059s-1 .474-1 1.059v12.326l-3.293-3.487" clip-rule="evenodd"/></svg>`
-export { arrowDown as default }

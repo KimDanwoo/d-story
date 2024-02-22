@@ -33,11 +33,18 @@ export class Button extends TailwindElement(styles) {
         class=${`button button--${this.size} button--${this.color} button-${this.type}`}
         style=${styleMap({ backgroundColor: this.backgroundColor })}
         ?disabled=${this.disabled}
-        @click=${this.onClick}
+        @click=${this.onClickButton}
       >
         <slot name="leftIcon"></slot>${this.label}<slot name="rightIcon"></slot>
       </button>
     `
+  }
+
+  protected onClickButton() {
+    if (this.disabled) return
+    if (this.onClick) {
+      this.onClick()
+    }
   }
 }
 

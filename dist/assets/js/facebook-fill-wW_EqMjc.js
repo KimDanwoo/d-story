@@ -1,2 +1,0 @@
-const facebookFill = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M2 12.056c0 4.972 3.61 9.106 8.333 9.944v-7.222h-2.5V12h2.5V9.778c0-2.5 1.611-3.889 3.89-3.889.721 0 1.5.111 2.221.222v2.556h-1.277c-1.223 0-1.5.61-1.5 1.389V12h2.666l-.444 2.778h-2.222V22C18.389 21.162 22 17.028 22 12.056 22 6.525 17.5 2 12 2S2 6.525 2 12.056" clip-rule="evenodd"/></svg>`
-export { facebookFill as default }

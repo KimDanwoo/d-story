@@ -1,0 +1,2 @@
+const arrowRight = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M13.399 7.707a.961.961 0 0 1 0-1.414 1.103 1.103 0 0 1 1.497 0l5.294 5c.198.187.31.442.31.707a.97.97 0 0 1-.31.707l-5.294 5c-.414.39-1.084.39-1.498 0a.961.961 0 0 1 0-1.414L16.886 13H4.559c-.585 0-1.059-.448-1.059-1s.474-1 1.059-1h12.326l-3.487-3.293" clip-rule="evenodd"/></svg>`
+export { arrowRight as default }

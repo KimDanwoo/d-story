@@ -1,2 +1,0 @@
-const imageSlash = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="M3.183 2.203a.693.693 0 1 0-.98.98l18.614 18.614a.693.693 0 1 0 .98-.98L3.183 2.203ZM6.97 4H19a2 2 0 0 1 2 2v12.03l-1.4-1.4V6a.6.6 0 0 0-.6-.6H8.37zm10.06 16-5.51-5.51L10.01 16l-1.02-1.01a1.4 1.4 0 0 0-1.98 0L4.4 17.6V7.37L3 5.97V18a2 2 0 0 0 2 2z"/><path fill="currentColor" d="M16 10.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg>`
-export { imageSlash as default }
