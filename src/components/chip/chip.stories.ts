@@ -1,13 +1,12 @@
 import { Meta, StoryObj } from '@storybook/web-components'
-import { ChipProps } from './Chip'
-import './Chip'
+import { ChipProps } from './chip'
+import './chip'
 import { html } from 'lit'
 
 const meta = {
   title: 'Components/Chip',
   tags: ['autodocs'],
-  render: (args: ChipProps) =>
-    html`<base-chip label=${args.label}></base-chip>`,
+  render: (args: ChipProps) => html`<base-chip label=${args.label}></base-chip>`,
 } satisfies Meta<ChipProps>
 
 export default meta

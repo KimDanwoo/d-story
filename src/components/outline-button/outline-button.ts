@@ -1,7 +1,7 @@
 import { customElement } from 'lit/decorators.js'
 import { html, unsafeCSS } from 'lit'
-import { Button } from '../Button/Button'
-import style from './outlineButton.css?inline'
+import { Button } from '../button/button'
+import style from './outline-button.css?inline'
 
 @customElement('outline-button')
 export class OutlineButton extends Button {
