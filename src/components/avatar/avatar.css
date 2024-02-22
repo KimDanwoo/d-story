@@ -16,7 +16,7 @@
   width: 64px;
   height: 64px;
 }
-.storybook-avatar.xlg {
+.storybook-avatar.xl {
   width: 80px;
   height: 80px;
 }
@@ -37,7 +37,7 @@
   width: 24px;
   height: 24px;
 }
-.storybook-avatar.xlg .svg-icon {
+.storybook-avatar.xl .svg-icon {
   width: 32px;
   height: 32px;
 }

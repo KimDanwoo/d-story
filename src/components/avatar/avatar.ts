@@ -1,22 +1,20 @@
-import { LitElement, html, unsafeCSS } from 'lit'
+import { html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import styles from './avatar.css?inline'
-export interface AvatarProps {
-  link: string
-  size: 'sm' | 'md' | 'lg' | 'xlg'
-}
+import { SIZE } from '@/constants'
+import TailwindElement from '@/shared/tailwind.element'
 
 @customElement('base-avatar')
-export class Avatar extends LitElement {
-  @property({ type: String }) link = ''
-  @property({ type: String }) size: 'sm' | 'md' | 'lg' | 'xlg' = 'xlg'
+export class Avatar extends TailwindElement(styles) {
+  @property({ type: String }) link: string = ''
+  @property({ type: String }) size: SIZE = 'md'
 
   constructor() {
     super()
   }
 
-  profile = (link: string) => html`<img src=${link} />`
-  default = html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" class="svg-icon">
+  protected profile = (link: string) => html`<img src=${link} />`
+  protected default = html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" class="svg-icon">
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -30,8 +28,6 @@ export class Avatar extends LitElement {
       <div class="storybook-avatar ${this.size}">${this.link !== '' ? this.profile(this.link) : this.default}</div>
     `
   }
-
-  static styles = unsafeCSS(styles)
 }
 
 declare global {
