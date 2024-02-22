@@ -4,18 +4,6 @@ import { styleMap } from 'lit/directives/style-map.js'
 import styles from './button.css?inline'
 import TailwindElement from '../../shared/tailwind.element'
 
-export interface ButtonProps {
-  color: 'primary' | 'secondary' | 'gray'
-  backgroundColor?: string
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-  type: 'basic' | 'solid' | 'round'
-  label: string
-  disabled: boolean
-  leftIcon?: Object
-  rightIcon?: Object
-  onClick?: () => void
-}
-
 @customElement('base-button')
 export class Button extends TailwindElement(styles) {
   @property({ type: String }) color?: 'primary' | 'secondary' | 'gray' = 'primary'
