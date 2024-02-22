@@ -1,7 +1,6 @@
 import { html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import styles from './avatar.css?inline'
-import { SIZE } from '@/constants'
 import TailwindElement from '@/shared/tailwind.element'
 
 @customElement('base-avatar')
