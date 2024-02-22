@@ -7,7 +7,7 @@ import TailwindElement from '@/shared/tailwind.element'
 @customElement('base-avatar')
 export class Avatar extends TailwindElement(styles) {
   @property({ type: String }) link: string = ''
-  @property({ type: String }) size: SIZE = 'md'
+  @property({ type: String }) size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md'
 
   constructor() {
     super()
