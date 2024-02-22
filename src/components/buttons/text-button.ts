@@ -1,14 +1,14 @@
 import { customElement } from 'lit/decorators.js'
 import { html, unsafeCSS } from 'lit'
-import { Button } from '../button/button'
-import style from './outline-button.css?inline'
+import { Button } from './button'
+import style from './text-button.css?inline'
 
-@customElement('outline-button')
-export class OutlineButton extends Button {
+@customElement('text-button')
+export class TextButton extends Button {
   render() {
     return html`<button
       type="button"
-      class=${`button--outline ${this.size} ${this.type} ${this.color} `}
+      class=${`button--text ${this.size} ${this.type} ${this.color} `}
       ?disabled=${this.disabled}
       @click=${this.onClick}
     >
@@ -21,6 +21,6 @@ export class OutlineButton extends Button {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'outline-button': OutlineButton
+    'text-button': TextButton
   }
 }

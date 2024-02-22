@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { Button } from '../button/button'
+import type { Button } from './button'
 import './text-button'
 import { html } from 'lit'
-// import '../Icons/PlusIcon'
 
 const Template = (args: Button) => html`
   <text-button
