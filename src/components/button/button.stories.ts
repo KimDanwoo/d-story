@@ -1,11 +1,9 @@
-import { Button } from './button'
+import type { Button } from './button'
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from './button'
-import './button'
 import { html } from 'lit'
-// import '../Icons/PlusIcon'
+import './button'
 
-const Template = (args: ButtonProps) => html`
+const Template = (args: Button) => html`
   <base-button
     style="margin: 0 0.5rem"
     color=${args.color || 'primary'}
@@ -40,10 +38,10 @@ const meta = {
     },
   },
   component: 'my-button',
-} satisfies Meta<ButtonProps>
+} satisfies Meta<Button>
 
 export default meta
-type Story = StoryObj<ButtonProps>
+type Story = StoryObj<Button>
 
 export const Default: Story = {
   args: {
