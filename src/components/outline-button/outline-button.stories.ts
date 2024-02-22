@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
-import type { ButtonProps } from '../Button/Button'
+import type { ButtonProps } from '../button/button'
 import './outline-button'
 import { html } from 'lit'
 
