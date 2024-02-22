@@ -17,7 +17,7 @@ const Template = (args: Button) => html`
 `
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Components/Buttons/Button',
   tags: ['autodocs'],
   render: Template,
   argTypes: {
