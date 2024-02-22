@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/web-components'
-import { ChipProps } from './chip'
-import './chip'
+import { ChipProps } from './Chip'
+import './Chip'
 import { html } from 'lit'
 
 const meta = {
