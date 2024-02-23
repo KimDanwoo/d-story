@@ -1,4 +1,4 @@
-# storybook + lit
+# storybook + lit ✨
 
 ```bash
   npm i
