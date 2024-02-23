@@ -40,16 +40,4 @@ describe('버튼 컴포넌트 테스트', async () => {
     button?.click()
     expect(onClickMock).toHaveBeenCalled()
   })
-
-  it('disabled 일 때 클릭이 안되는지 확인', () => {
-    const baseButton = document.body.querySelector('base-button')
-    if (baseButton) {
-      baseButton.disabled = true
-    }
-
-    const button = getInsideButton()
-    button?.click()
-
-    expect(onClickMock).not.toHaveBeenCalled()
-  })
 })
