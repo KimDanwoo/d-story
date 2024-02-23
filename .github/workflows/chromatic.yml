@@ -48,12 +48,12 @@ jobs:
         run: npm publish --access public
       - name: package.json URL부분 최신화
         run: sed -i "s|CHROMATIC_HOMEPAGE|${{ steps.chromatic.outputs.storybookUrl }}|g" package.json
-      - name: github 권한 설정
-        run: |
-          git config --global user.name "KimDanwoo"
-          git config --global user.email "dudgh9198@naver.com"
-      - name: 배포용 dist 폴더 생성 후 배포
-        run: |
-          git add dist
-          git commit -am 'build: automate deploy dist'
-          git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:main
+      # - name: github 권한 설정
+      #   run: |
+      #     git config --global user.name "KimDanwoo"
+      #     git config --global user.email "dudgh9198@naver.com"
+      # - name: 배포용 dist 폴더 생성 후 배포
+      #   run: |
+      #     git add dist
+      #     git commit -am 'build: automate deploy dist'
+      #     git push https://${{ secrets.GIT_AUTH_TOKEN }}@github.com/KimDanwoo/d-story.git HEAD:main
