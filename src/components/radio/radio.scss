@@ -1,0 +1,178 @@
+$primary: theme('colors.brand.primary');
+
+@mixin radio-state($left, $top, $size) {
+  content: '';
+  position: absolute;
+  left: $left;
+  top: $top;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin default-text {
+  font-style: normal;
+  letter-spacing: -0.3px;
+  font-weight: 400;
+}
+
+@mixin text-sm {
+  @include default-text;
+  font-size: 14px !important;
+  line-height: 21px;
+}
+
+@mixin text-md {
+  @include default-text;
+  font-size: 18px !important;
+  line-height: 27px; /* 150% */
+}
+
+.radio-group {
+  display: flex;
+
+  .radio-element {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    position: relative;
+
+    .radio {
+      cursor: pointer;
+    }
+
+    .radio-circle {
+      position: absolute;
+      opacity: 0;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background: $primary;
+      border-radius: 50%;
+      z-index: 2;
+      &.active {
+        opacity: 1;
+      }
+
+      &.disabled {
+        background: #dadadc;
+      }
+    }
+
+    .custom-radio {
+      cursor: pointer;
+      width: 100%;
+      height: 22px;
+      padding-left: 27px;
+
+      span {
+        display: block;
+        margin-top: 1px;
+      }
+      &.default {
+        cursor: default;
+      }
+
+      &.label--sm {
+        @include text-sm;
+      }
+
+      &.label--md {
+        @include text-md;
+      }
+
+      &.active::before {
+        border: 1px solid $primary;
+      }
+
+      &.disabled::before {
+        border: 1px solid #dadadc !important;
+        background: #f9f9f9;
+        cursor: default;
+      }
+
+      &::before {
+        @include radio-state(0px, 1px, 20px);
+        border: 1px solid theme('colors.gray.200');
+        border-radius: 50%;
+      }
+    }
+
+    input[type='radio']:checked + .custom-radio::before {
+      display: block;
+      background: $primary;
+      border: 1px solid $primary;
+    }
+
+    input[type='radio']:disabled {
+      cursor: default;
+    }
+
+    input[type='radio']:disabled + .custom-radio::before {
+      background: #dadadc;
+      cursor: default;
+    }
+
+    input[type='radio']:checked:disabled + .custom-radio::before {
+      border: 1px solid theme('colors.gray.200');
+      background: #dadadc;
+      cursor: default;
+    }
+  }
+}
+
+.direction-row {
+  flex-direction: row;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-between {
+  align-items: space-between;
+}
+
+.align-around {
+  align-items: space-around;
+}
+
+.align-evenly {
+  align-items: space-evenly;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
