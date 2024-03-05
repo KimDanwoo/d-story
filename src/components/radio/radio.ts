@@ -3,11 +3,10 @@ import { customElement, property } from 'lit/decorators.js'
 import styles from './radio.scss?inline'
 import TailwindElement from '@/shared/tailwind.element'
 import '@/components/icon/icon'
-import { SIZE } from '@/constants'
 
 @customElement('dwc-radio')
 export class Radio extends TailwindElement(styles) {
-  @property({ type: String }) size?: SIZE = 'sm'
+  @property({ type: String }) size?: 'sm' | 'md' = 'sm'
   @property({ type: Boolean }) disabled: boolean = false
   @property({ type: Function }) onClick?: (checked: Event) => void
   @property({ type: Array }) options: string[] = []
