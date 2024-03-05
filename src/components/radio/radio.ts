@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js'
 import styles from './radio.scss?inline'
 import TailwindElement from '@/shared/tailwind.element'
 import '@/components/icon/icon'
-import { SIZE } from '@/constants/size'
+import { SIZE } from '@/constants'
 
 @customElement('dwc-radio')
 export class Radio extends TailwindElement(styles) {
